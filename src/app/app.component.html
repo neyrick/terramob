@@ -1,0 +1,14 @@
+<div id="topmenu">
+<div id="ntBloc">
+  <div id="minusNt" class="roundButton" (click)="ntMoins()"></div>
+  <div id="ntDisplay" class="plaque">
+     {{ partie.etat.nt }}
+  </div>
+  <div id="plusNt" class="roundButton" (click)="ntPlus()"></div>
+</div>
+<div id="resetButton" (click)="reset()" class="btn sgadow rounded gradient">Réinitialiser</div>
+<div id="tourDisplay" class="plaque">Tour: {{ partie.tour }}</div>
+<div id="nextTurnButton" class="roundButton" (click)="passerTour()"></div>
+<div id="rewindButton" (click)="rewind()" class="btn sgadow rounded gradient">Revenir en arrère</div>
+</div>
+<app-tabressources [etat]="partie.etat" (notifyChange)="handleChange($event)"></app-tabressources>

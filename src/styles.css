@@ -1,0 +1,178 @@
+/* Application-wide Styles */
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;  
+}
+body, input[text], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div#topmenu div{
+    display: inline-block;
+    float:left;
+}
+div#ntBloc div{
+    display: inline-block;    
+}
+div.roundButton{
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+   cursor:pointer;
+}
+div#minusNt{
+  background-image: url('assets/minus.gif');
+}
+div#plusNt{
+  background-image: url('assets/plus.gif');
+}
+div#nextTurnButton{
+  background-image: url('assets/nextturn.gif');
+}
+
+div.btn{border:#BBB 1px solid; color:#5f5e5e; display:block; float:left; padding:12px 15px; margin-right:10px; cursor:pointer;
+    font-size: 60px;}
+div:hover.btn{text-decoration:none; background:#FFF;}
+ 
+.rounded, div.btn{
+-webkit-border-radius:6px;
+-moz-border-radius:6px;
+border-radius:6px;
+-khtml-border-radius: 6px;
+}
+ 
+.shadow, div.btn{
+-moz-box-shadow: 0px 1px 3px #AAA;
+-webkit-box-shadow: 0px 1px 3px #AAA;
+box-shadow: 0px 1px 3px #AAA;
+}
+ 
+.gradient, div.btn{
+background: #FFF; /* for non-css3 browsers */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#DDDDDD'); /* for IE */
+background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#DDD)); /* for webkit browsers */
+background: -moz-linear-gradient(top,  #FFF,  #DDD); /* for firefox 3.6+ */
+}
+div.tabressources {
+  width: 96%;
+  padding: 0px;
+  clear: both;
+}
+div.blocRessource {
+  float: left;
+  width: 31%;
+  padding: 10px;
+}
+@media all and (orientation:landscape)
+{
+    div.blocRessource {
+      width: 32%;
+    }
+}
+@media all and (orientation:portrait)
+{
+    div.blocRessource {
+      width: 46%;
+    }
+}
+div.sousBlocRessource {
+  min-width: 260px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid black;
+  border-radius: 25px;
+  background-blend-mode: multiply;
+  background-color: rgba(200,100,0,.5);
+}
+div.sousBlocRessource {
+  background-color: rgba(0,50,100,.5);
+}
+div.qteRessource {
+  min-height: 210px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  text-align: right;
+  font-size: 200px;
+  border: none;
+  color: white;
+}
+div.sousBlocRessource.mcred {
+  background-image: url('assets/bg-mcred.jpg');
+}
+div.qteRessource.mcred {
+  background-image: url('assets/res-mcred.png');
+}
+div.sousBlocRessource.acier {
+  background-image: url('assets/bg-acier.jpg');
+}
+div.qteRessource.acier {
+  background-image: url('assets/res-acier.png');
+}
+div.sousBlocRessource.titane {
+  background-image: url('assets/bg-titane.jpg');
+}
+div.qteRessource.titane {
+  background-image: url('assets/res-titane.png');
+}
+div.sousBlocRessource.plante {
+  background-image: url('assets/bg-plante.jpg');
+}
+div.qteRessource.plante {
+  background-image: url('assets/res-plante.png');
+}
+div.sousBlocRessource.energie {
+  background-image: url('assets/bg-energie.jpg');
+}
+div.qteRessource.energie {
+  background-image: url('assets/res-energie.png');
+}
+div.sousBlocRessource.chaleur {
+  background-image: url('assets/bg-chaleur.jpg');
+}
+div.qteRessource.chaleur {
+  background-image: url('assets/res-chaleur.png');
+}
+div.plaque {
+  height: 85px;
+  width: 230px;
+  border: none;
+  background-repeat: round;
+  background-position: center;
+  text-align: right;
+  font-size: 60px;
+  color: white;
+  padding-right: 30px;
+  padding-top: 15px;
+}
+div#ntDisplay {
+  display: inline-block;
+  background-image: url('assets/plaque-nt.png');
+}
+div#tourDisplay {
+  background-image: url('assets/plaque.png');
+  text-align: center;
+  padding-right: 0px;
+  width: 260px;
+}
+div.productionRessource {
+  background-image: url('assets/plaque-prod.png');
+  margin-left: auto ;
+  margin-right: auto ;
+}
+

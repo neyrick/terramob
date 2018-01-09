@@ -1,0 +1,10 @@
+<div *ngIf="ressource" class="blocRessource">
+  <div class="sousBlocRessource {{ idRessource }}">
+    <div class="qteRessource {{ idRessource }}" (click)="openDialogQte()">
+            {{ ressource.qte }}
+    </div>
+    <div class="productionRessource plaque" (click)="openDialogProduction()">
+          {{ ressource.production }}
+        </div>
+  </div>
+</div>
