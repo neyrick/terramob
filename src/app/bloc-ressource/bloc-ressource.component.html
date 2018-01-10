@@ -8,3 +8,15 @@
         </div>
   </div>
 </div>
+
+<div #deltaDialog title="Gain / Dépense">
+
+  <table id="deltaDigits">
+    <tr><td (click)="addDelta(1)">1</td><td (click)="addDelta(2)">2</td><td (click)="addDelta(3)">3</td></tr>
+    <tr><td (click)="addDelta(4)">4</td><td (click)="addDelta(5)">5</td><td (click)="addDelta(6)">6</td></tr>
+    <tr><td (click)="addDelta(7)">7</td><td (click)="addDelta(8)">8</td><td (click)="addDelta(9)">9</td></tr>
+    <tr><td (click)="addDelta(0)">0</td><td colspan="2" (click)="reverseDeltaValue()">+ / -</td></tr>
+   </table>
+   <div id="deltaDisplay" (click)="closeDialogQte()"> {{ deltaValue }}
+   </div>
+</div>

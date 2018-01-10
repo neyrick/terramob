@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { BlocRessourceComponent } from './bloc-ressource/bloc-ressource.component';
 import { TabressourcesComponent } from './tabressources/tabressources.component';
 
+import * as $ from 'jquery';
+
 @NgModule({
   declarations: [
     AppComponent,
     BlocRessourceComponent,
-    TabressourcesComponent
+    TabressourcesComponent,
   ],
   imports: [
     BrowserModule,
