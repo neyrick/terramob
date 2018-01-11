@@ -20,6 +20,12 @@ body, input[text], button {
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+.greenText {
+  color: green;
+}
+.redText {
+  color: red;
+}
 
 div#topmenu div{
     display: inline-block;
@@ -90,27 +96,33 @@ div.blocRessource {
       width: 46%;
     }
 }
-div.sousBlocRessource {
-  min-width: 260px;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 2px solid black;
-  border-radius: 25px;
-  background-blend-mode: multiply;
-  background-color: rgba(200,100,0,.5);
-}
-div.sousBlocRessource {
-  background-color: rgba(0,50,100,.5);
-}
-div.qteRessource {
-  min-height: 210px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: left center;
-  text-align: right;
-  font-size: 200px;
+
+div.plaque {
+  height: 85px;
+  width: 230px;
   border: none;
+  background-repeat: round;
+  background-position: center;
+  text-align: right;
+  font-size: 60px;
   color: white;
+  padding-right: 30px;
+  padding-top: 15px;
+}
+div#ntDisplay {
+  display: inline-block;
+  background-image: url('assets/plaque-nt.png');
+}
+div#tourDisplay {
+  background-image: url('assets/plaque.png');
+  text-align: center;
+  padding-right: 0px;
+  width: 260px;
+}
+div.productionRessource {
+  background-image: url('assets/plaque-prod.png');
+  margin-left: auto ;
+  margin-right: auto ;
 }
 div.sousBlocRessource.mcred {
   background-image: url('assets/bg-mcred.jpg');
@@ -147,32 +159,5 @@ div.sousBlocRessource.chaleur {
 }
 div.qteRessource.chaleur {
   background-image: url('assets/res-chaleur.png');
-}
-div.plaque {
-  height: 85px;
-  width: 230px;
-  border: none;
-  background-repeat: round;
-  background-position: center;
-  text-align: right;
-  font-size: 60px;
-  color: white;
-  padding-right: 30px;
-  padding-top: 15px;
-}
-div#ntDisplay {
-  display: inline-block;
-  background-image: url('assets/plaque-nt.png');
-}
-div#tourDisplay {
-  background-image: url('assets/plaque.png');
-  text-align: center;
-  padding-right: 0px;
-  width: 260px;
-}
-div.productionRessource {
-  background-image: url('assets/plaque-prod.png');
-  margin-left: auto ;
-  margin-right: auto ;
 }
 

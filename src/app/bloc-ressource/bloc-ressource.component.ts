@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef, Input, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { EtatRessource } from '../classes';
+import {SignedPipe} from '../signed.pipe';
+
 declare var $:any;
 
 @Component({
@@ -36,6 +38,7 @@ export class BlocRessourceComponent implements AfterViewInit {
   }
 
   openDialogQte() : void {
+     this.deltaValue = 0;
      $(this.el.nativeElement).dialog( "open" );
   }
 
@@ -53,6 +56,10 @@ export class BlocRessourceComponent implements AfterViewInit {
 
   reverseDeltaValue() : void {
         this.deltaValue = 0 - this.deltaValue;
+  }
+
+  clearDeltaValue() : void {
+        this.deltaValue = 0;
   }
 
   addDelta(value : number) : void {

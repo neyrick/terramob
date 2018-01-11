@@ -1,0 +1,39 @@
+div.sousBlocRessource {
+  min-width: 260px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid black;
+  border-radius: 25px;
+  background-blend-mode: multiply;
+  background-color: rgba(200,100,0,.5);
+}
+div.sousBlocRessource {
+  background-color: rgba(0,50,100,.5);
+}
+div.qteRessource {
+  min-height: 210px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  text-align: right;
+  font-size: 200px;
+  border: none;
+  color: white;
+}
+td.deltaDigit {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  text-align: center;
+  cursor:pointer;
+}
+td.deltaDigit:active {
+  background-color: black;
+  color: white;  
+}
+td#deltaDisplay {
+  text-align: right;
+  font-size: 90px;
+  width: 120px;
+  cursor:pointer;
+}

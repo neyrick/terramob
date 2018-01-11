@@ -8,12 +8,14 @@ import { BlocRessourceComponent } from './bloc-ressource/bloc-ressource.componen
 import { TabressourcesComponent } from './tabressources/tabressources.component';
 
 import * as $ from 'jquery';
+import { SignedPipe } from './signed.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlocRessourceComponent,
     TabressourcesComponent,
+    SignedPipe,
   ],
   imports: [
     BrowserModule,
