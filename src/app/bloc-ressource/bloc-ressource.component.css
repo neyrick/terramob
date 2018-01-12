@@ -19,6 +19,7 @@ div.qteRessource {
   font-size: 200px;
   border: none;
   color: white;
+  position: relative;
 }
 td.deltaDigit {
   width: 30px;
@@ -36,4 +37,13 @@ td#deltaDisplay {
   font-size: 90px;
   width: 120px;
   cursor:pointer;
+}
+div.productionRessource {
+  margin-left: auto ;
+  margin-right: auto ;
+}
+div.qteDelta {
+    position: absolute;
+    width: 100%;
+    display: none;
 }

@@ -1,10 +1,12 @@
 <div *ngIf="ressource" class="blocRessource">
   <div class="sousBlocRessource {{ idRessource }}">
+    
     <div class="qteRessource {{ idRessource }}" (click)="openDialogQte()">
-            {{ ressource.qte }}
+        <div class="qteDelta {{ idRessource }}" [ngClass]="deltaValue > 0 ? 'greenText' : 'redText'"><span class="digits">{{ deltaValue }}</span></div>            
+        <div><span class="digits">{{ ressource.qte }}</span></div>            
     </div>
     <div class="productionRessource plaque" (click)="openDialogProduction()">
-          {{ ressource.production }}
+          <div class="productionValue"><span class="digits">{{ ressource.production }}</span></div>
         </div>
   </div>
 </div>

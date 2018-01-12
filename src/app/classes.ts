@@ -27,17 +27,6 @@ export class Partie {
   }
 
   passerTour(): void {
-     this.etat.chaleur.qte += this.etat.energie.qte;
-     this.etat.energie.qte = 0;
-     this.etat.mcred.qte += this.etat.nt;
- 
-     this.etat.mcred.qte += this.etat.mcred.production;
-     this.etat.acier.qte += this.etat.acier.production;
-     this.etat.titane.qte += this.etat.titane.production;
-     this.etat.plante.qte += this.etat.plante.production;
-     this.etat.energie.qte += this.etat.energie.production;
-     this.etat.chaleur.qte += this.etat.chaleur.production;
-
      this.tour++;
      this.enregistrerTour();
   }

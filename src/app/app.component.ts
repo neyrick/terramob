@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChildren, QueryList } from '@angular/core';
+import { BlocRessourceComponent } from './bloc-ressource/bloc-ressource.component';
 import { Partie } from './classes';
 
 @Component({
@@ -7,6 +8,8 @@ import { Partie } from './classes';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  @ViewChildren(BlocRessourceComponent) blocsRessources : QueryList<BlocRessourceComponent>;
 
   partie: Partie = new Partie();
 
@@ -24,10 +27,21 @@ export class AppComponent {
      this.save();
   }
 
-  passerTour() {
+  passerTour() : void {
+     var chaleur = this.partie.etat.energie.qte;
+     this.blocsRessources.forEach( bloc => bloc.applyChaleur(chaleur));
+     this.blocsRessources.forEach( bloc => bloc.applyProduction(this.partie.etat.nt));
      this.partie.passerTour();
      this.save();
   }
+
+  afficherProductions() : void {
+      setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+      }, 1000 );
+//         this.partie.passerTour();
+         this.save();
+  };
 
   rewind() {
      this.partie.rewind();

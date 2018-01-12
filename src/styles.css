@@ -1,24 +1,16 @@
-/* Application-wide Styles */
-h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
-}
-h2, h3 {
-  color: #444;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+@font-face {
+    font-family: 'alarm_clockregular';
+    src: url('assets/alarm_clock-webfont.woff2') format('woff2'),
+         url('assets/alarm_clock-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 body {
   margin: 2em;  
+    font-family: 'arial';
 }
-body, input[text], button {
-  color: #888;
-  font-family: Cambria, Georgia;
-}
-/* everywhere else */
-* {
-  font-family: Arial, Helvetica, sans-serif;
+span.digits {
+  font-family: 'alarm_clockregular';
 }
 .greenText {
   color: green;
@@ -121,8 +113,7 @@ div#tourDisplay {
 }
 div.productionRessource {
   background-image: url('assets/plaque-prod.png');
-  margin-left: auto ;
-  margin-right: auto ;
+
 }
 div.sousBlocRessource.mcred {
   background-image: url('assets/bg-mcred.jpg');
@@ -160,4 +151,6 @@ div.sousBlocRessource.chaleur {
 div.qteRessource.chaleur {
   background-image: url('assets/res-chaleur.png');
 }
+
+
 

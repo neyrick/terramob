@@ -43,14 +43,10 @@ export class BlocRessourceComponent implements AfterViewInit {
   }
 
   closeDialogQte() : void {
-     if ((this.ressource.qte + this.deltaValue) < 0) {
-        // afficher erreur
-     }
-     else {
-        this.ressource.qte += this.deltaValue;
-        $(this.el.nativeElement).dialog( "close" );     
-        this.deltaValue = 0;
-        this.notifyChange.emit(0);
+     $(this.el.nativeElement).dialog( "close" );  
+      this.applyDelta();   
+     if (this.deltaValue != 0) {
+         this.notifyChange.emit(0);
      }
   }
 
@@ -78,4 +74,40 @@ export class BlocRessourceComponent implements AfterViewInit {
     }
   }
 
+  setDelta(value : number) : void {
+    this.deltaValue = value;
+  } 
+
+  applyChaleur(chaleur : number) : void {
+     if (chaleur == 0) {
+        return;
+    }
+    if (this.idRessource == 'energie') {
+       this.deltaValue = 0 - chaleur;
+       this.applyDelta();
+    }
+    else if (this.idRessource == 'chaleur') {
+       this.deltaValue = chaleur;
+     console.log("chaleur avant:" + this.ressource.qte);
+       this.applyDelta();
+     console.log("chaleur apres:" + this.ressource.qte);
+    }
+  }
+
+  applyDelta() : void {
+     if (this.deltaValue == 0) {
+        return;
+    }
+     $( '.qteDelta.' + this.idRessource ).removeAttr( "style" ).hide().fadeIn();
+      $( '.qteDelta.' + this.idRessource).hide( "drop", { direction: (this.deltaValue > 0 ? "up": "down") }, "slow", function() { this.deltaValue = 0;});
+        this.ressource.qte += this.deltaValue;
+  }
+
+  applyProduction(nt : number) : void {
+     this.deltaValue = this.ressource.production;
+     if (this.idRessource == 'mcred') {
+         this.deltaValue += nt;
+     }
+     this.applyDelta();
+  }
 }

@@ -2,13 +2,21 @@
 <div id="ntBloc">
   <div id="minusNt" class="roundButton" (click)="ntMoins()"></div>
   <div id="ntDisplay" class="plaque">
-     {{ partie.etat.nt }}
+     <span class="digits">{{ partie.etat.nt }}</span>
   </div>
   <div id="plusNt" class="roundButton" (click)="ntPlus()"></div>
 </div>
 <div id="resetButton" (click)="reset()" class="btn sgadow rounded gradient">Réinitialiser</div>
-<div id="tourDisplay" class="plaque">Tour: {{ partie.tour }}</div>
+<div id="tourDisplay" class="plaque">Tour: <span class="digits">{{ partie.tour }}</span></div>
 <div id="nextTurnButton" class="roundButton" (click)="passerTour()"></div>
 <div id="rewindButton" (click)="rewind()" class="btn sgadow rounded gradient">Revenir en arrère</div>
 </div>
-<app-tabressources [etat]="partie.etat" (notifyChange)="handleChange($event)"></app-tabressources>
+<div class="tabressources">
+<app-bloc-ressource [idRessource]="'mcred'" [ressource]="partie.etat.mcred" (notifyChange)="handleChange($event)"></app-bloc-ressource>
+<app-bloc-ressource [idRessource]="'acier'" [ressource]="partie.etat.acier" (notifyChange)="handleChange($event)"></app-bloc-ressource>
+<app-bloc-ressource [idRessource]="'titane'" [ressource]="partie.etat.titane" (notifyChange)="handleChange($event)"></app-bloc-ressource>
+<app-bloc-ressource [idRessource]="'plante'" [ressource]="partie.etat.plante" (notifyChange)="handleChange($event)"></app-bloc-ressource>
+<app-bloc-ressource [idRessource]="'energie'" [ressource]="partie.etat.energie" (notifyChange)="handleChange($event)"></app-bloc-ressource>
+<app-bloc-ressource [idRessource]="'chaleur'" [ressource]="partie.etat.chaleur" (notifyChange)="handleChange($event)"></app-bloc-ressource>
+</div>
+

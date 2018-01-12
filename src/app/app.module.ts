@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { BlocRessourceComponent } from './bloc-ressource/bloc-ressource.component';
-import { TabressourcesComponent } from './tabressources/tabressources.component';
 
 import * as $ from 'jquery';
 import { SignedPipe } from './signed.pipe';
@@ -14,7 +13,6 @@ import { SignedPipe } from './signed.pipe';
   declarations: [
     AppComponent,
     BlocRessourceComponent,
-    TabressourcesComponent,
     SignedPipe,
   ],
   imports: [
