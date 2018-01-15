@@ -1,11 +1,11 @@
-td.deltaDigit {
+td.numpadDigit {
   width: 100px;
   height: 30px;
   border: 1px solid black;
   text-align: center;
   cursor:pointer;
 }
-td.deltaDigit:active {
+td.numpadDigit:active {
   background-color: black;
   color: white;  
 }

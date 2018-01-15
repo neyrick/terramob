@@ -13,16 +13,28 @@ export class EtatTour {
   chaleur: EtatRessource;
 }
 
+export class Scores {
+  objectifs : number;
+  recompenses : number;
+  cites : number;
+  forets : number;
+  cartes : number;
+}
+
 export class Partie {
   tour: number;
-  historique: EtatTour[];
-  etat: EtatTour;
-  modifie: boolean;
+  historique: EtatTour[] = [];
+  etat: EtatTour = { nt: 20, mcred: { qte: 0, production: 0}, acier: { qte: 0, production: 0}, titane: { qte: 0, production: 0}, plante: { qte: 0, production: 0}, energie: { qte: 0, production: 0}, chaleur: { qte: 0, production: 0}};
+  modifie: boolean = false;
+  terminee : boolean = false;
+  scores : Scores = { objectifs : 0, recompenses : 0, cites : 0, forets : 0, cartes : 0};
 
   init(): void {
      this.tour = 1;
      this.historique = [];
-     this.etat = { nt: 0, mcred: { qte: 0, production: 0}, acier: { qte: 0, production: 0}, titane: { qte: 0, production: 0}, plante: { qte: 0, production: 0}, energie: { qte: 0, production: 0}, chaleur: { qte: 0, production: 0}};
+     this.terminee = false;
+     this.etat = { nt: 20, mcred: { qte: 0, production: 0}, acier: { qte: 0, production: 0}, titane: { qte: 0, production: 0}, plante: { qte: 0, production: 0}, energie: { qte: 0, production: 0}, chaleur: { qte: 0, production: 0}};
+     this.scores = { objectifs : 0, recompenses : 0, cites : 0, forets : 0, cartes : 0};
      this.enregistrerTour();
   }
 
@@ -50,7 +62,12 @@ export class Partie {
     }
   }
 
-  changerNt(delta: number) {
+  terminer() : void {
+     this.enregistrerTour();
+     this.terminee = true;
+  }
+
+  changerNt(delta: number) : void {
      this.etat.nt += delta;
      this.modifie = true;
   }

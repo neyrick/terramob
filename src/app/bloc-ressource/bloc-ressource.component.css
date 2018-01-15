@@ -22,7 +22,7 @@ div.qteRessource {
   position: relative;
 }
 td.deltaDigit {
-  width: 30px;
+  width: 50px;
   height: 30px;
   border: 1px solid black;
   text-align: center;
@@ -41,6 +41,13 @@ td#deltaDisplay {
 div.productionRessource {
   margin-left: auto ;
   margin-right: auto ;
+}
+div.productionValue {
+  width: 200px;
+}
+div.prodButton {
+  height: 100px;
+  width: 100px;
 }
 div.qteDelta {
     position: absolute;

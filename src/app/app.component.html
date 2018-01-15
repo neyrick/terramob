@@ -1,22 +1,33 @@
 <div id="topmenu">
-<div id="ntBloc">
-  <div id="minusNt" class="roundButton" (click)="ntMoins()"></div>
-  <div id="ntDisplay" class="plaque">
+<div id="ntBloc" class="plaque">
+  <div class="ntButton minusButton roundButton" (click)="ntMoins()"></div>
+  <div id="ntDisplay">
      <span class="digits">{{ partie.etat.nt }}</span>
   </div>
-  <div id="plusNt" class="roundButton" (click)="ntPlus()"></div>
+  <div class="ntButton plusButton roundButton" (click)="ntPlus()"></div>
 </div>
-<div id="resetButton" (click)="reset()" class="btn sgadow rounded gradient">Réinitialiser</div>
-<div id="tourDisplay" class="plaque">Tour: <span class="digits">{{ partie.tour }}</span></div>
-<div id="nextTurnButton" class="roundButton" (click)="passerTour()"></div>
-<div id="rewindButton" (click)="rewind()" class="btn sgadow rounded gradient">Revenir en arrère</div>
+<div id="resetButton" (click)="reset()" class="btn shadow rounded gradient">Réinitialiser</div>
+<div id="tourDisplay" class="plaque" (click)="passerTour()">Tour: <span class="digits">{{ partie.tour }}</span></div>
+<div id="rewindButton" (click)="rewind()" class="btn shadow rounded gradient">Revenir en arrère</div>
+<div id="endGameButton" (click)="finPartie()" class="btn shadow rounded gradient">Fin de la Partie</div>
 </div>
 <div class="tabressources">
-<app-bloc-ressource [idRessource]="'mcred'" [ressource]="partie.etat.mcred" (notifyChange)="handleChange($event)"></app-bloc-ressource>
-<app-bloc-ressource [idRessource]="'acier'" [ressource]="partie.etat.acier" (notifyChange)="handleChange($event)"></app-bloc-ressource>
-<app-bloc-ressource [idRessource]="'titane'" [ressource]="partie.etat.titane" (notifyChange)="handleChange($event)"></app-bloc-ressource>
-<app-bloc-ressource [idRessource]="'plante'" [ressource]="partie.etat.plante" (notifyChange)="handleChange($event)"></app-bloc-ressource>
-<app-bloc-ressource [idRessource]="'energie'" [ressource]="partie.etat.energie" (notifyChange)="handleChange($event)"></app-bloc-ressource>
-<app-bloc-ressource [idRessource]="'chaleur'" [ressource]="partie.etat.chaleur" (notifyChange)="handleChange($event)"></app-bloc-ressource>
+<app-bloc-ressource [idRessource]="'mcred'" [ressource]="partie.etat.mcred" (notifyChange)="handleChange($event)" (notifyNT)="changerNT($event)"></app-bloc-ressource>
+<app-bloc-ressource [idRessource]="'acier'" [ressource]="partie.etat.acier" (notifyChange)="handleChange($event)" (notifyNT)="changerNT($event)"></app-bloc-ressource>
+<app-bloc-ressource [idRessource]="'titane'" [ressource]="partie.etat.titane" (notifyChange)="handleChange($event)" (notifyNT)="changerNT($event)"></app-bloc-ressource>
+<app-bloc-ressource [idRessource]="'plante'" [ressource]="partie.etat.plante" (notifyChange)="handleChange($event)" (notifyNT)="changerNT($event)"></app-bloc-ressource>
+<app-bloc-ressource [idRessource]="'energie'" [ressource]="partie.etat.energie" (notifyChange)="handleChange($event)" (notifyNT)="changerNT($event)"></app-bloc-ressource>
+<app-bloc-ressource [idRessource]="'chaleur'" [ressource]="partie.etat.chaleur" (notifyChange)="handleChange($event)" (notifyNT)="changerNT($event)"></app-bloc-ressource>
 </div>
+<div #cardsDialog title="Achat de Cartes">
+
+  <p>Combien de cartes achetées pendant la phase de recherche ?</p>
+
+  <table>
+    <tr><td class="deltaDigit" (click)="confirmCard(0)">0</td><td class="deltaDigit" (click)="confirmCard(1)">1</td><td class="deltaDigit" (click)="confirmCard(2)">2</td><td class="deltaDigit" (click)="confirmCard(3)">3</td><td class="deltaDigit" (click)="confirmCard(4)">4</td></tr>
+   </table>
+</div>
+
+ <app-endgame-dialog [etat]="partie.etat" [scores]="partie.scores" (restartEmitter)="reset($event)"></app-endgame-dialog> 
+
 

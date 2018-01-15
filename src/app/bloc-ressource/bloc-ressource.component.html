@@ -2,21 +2,13 @@
   <div class="sousBlocRessource {{ idRessource }}">
     
     <div class="qteRessource {{ idRessource }}" (click)="openDialogQte()">
-        <div class="qteDelta {{ idRessource }}" [ngClass]="deltaValue > 0 ? 'greenText' : 'redText'"><span class="digits">{{ deltaValue }}</span></div>            
+        <div class="qteDelta {{ idRessource }}"><span #posDelta class="digits greenText"></span><span #negDelta class="digits redText"></span></div>            
         <div><span class="digits">{{ ressource.qte }}</span></div>            
     </div>
-    <div class="productionRessource plaque" (click)="openDialogProduction()">
-          <div class="productionValue"><span class="digits">{{ ressource.production }}</span></div>
+    <div class="productionRessource plaque">
+          <div class="prodButton minusButton roundButton" (click)="diminuerProduction()"> </div><div class="productionValue"><span class="digits">{{ ressource.production }}</span></div><div class="prodButton plusButton roundButton" (click)="augmenterProduction()"> </div>
         </div>
   </div>
 </div>
 
-<div #deltaDialog title="Gain / Dépense">
-
-  <table>
-    <tr><td class="deltaDigit" (click)="addDelta(1)">1</td><td class="deltaDigit" (click)="addDelta(2)">2</td><td class="deltaDigit" (click)="addDelta(3)">3</td><td id="deltaDisplay" rowspan="4"(click)="closeDialogQte()" [ngClass]="deltaValue > 0 ? 'greenText' : 'redText'"> {{ deltaValue | signed}}</td></tr>
-    <tr><td class="deltaDigit" (click)="addDelta(4)">4</td><td class="deltaDigit" (click)="addDelta(5)">5</td><td class="deltaDigit" (click)="addDelta(6)">6</td></tr>
-    <tr><td class="deltaDigit" (click)="addDelta(7)">7</td><td class="deltaDigit" (click)="addDelta(8)">8</td><td class="deltaDigit" (click)="addDelta(9)">9</td></tr>
-    <tr><td class="deltaDigit" (click)="addDelta(0)">0</td><td class="deltaDigit" (click)="reverseDeltaValue()">+/-</td><td class="deltaDigit" (click)="clearDeltaValue()">C</td></tr>
-   </table>
-</div>
+<app-numpad [title]="'Augmenter / Diminuer la réserve'" [defMultiplier]="-1" [maxDigits]="2" [showPlus]="true" (validateEmitter)="applyDeltaQte($event)"></app-numpad>

@@ -8,12 +8,16 @@ import { BlocRessourceComponent } from './bloc-ressource/bloc-ressource.componen
 
 import * as $ from 'jquery';
 import { SignedPipe } from './signed.pipe';
+import { EndgameDialogComponent } from './endgame-dialog/endgame-dialog.component';
+import { NumpadComponent } from './numpad/numpad.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlocRessourceComponent,
     SignedPipe,
+    EndgameDialogComponent,
+    NumpadComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef, Input, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { EtatRessource } from '../classes';
+import { NumpadComponent } from '../numpad/numpad.component';
 import {SignedPipe} from '../signed.pipe';
 
 declare var $:any;
@@ -9,9 +10,12 @@ declare var $:any;
   templateUrl: './bloc-ressource.component.html',
   styleUrls: ['./bloc-ressource.component.css']
 })
-export class BlocRessourceComponent implements AfterViewInit {
+export class BlocRessourceComponent {
 
-  @ViewChild('deltaDialog') el:ElementRef;
+  @ViewChild(NumpadComponent) numpad;
+
+  @ViewChild('posDelta') posDelta : ElementRef;
+  @ViewChild('negDelta') negDelta : ElementRef;
 
   @Input() ressource: EtatRessource;
 
@@ -19,95 +23,69 @@ export class BlocRessourceComponent implements AfterViewInit {
  
   @Output()  notifyChange: EventEmitter<number> = new EventEmitter();
 
-  deltaValue : number = 0;
+  @Output()  notifyNT: EventEmitter<number> = new EventEmitter();
 
-  constructor() { }
-
-  ngAfterViewInit() {
-    $(this.el.nativeElement).dialog({
-      autoOpen: false,
-      modal: true,
-      show: { effect: "drop", duration: 400, direction : 'up' },
-      hide: { effect: "drop", duration: 400, direction : 'up' },
-    });
+  diminuerProduction() : void {
+     if ((this.ressource.production > 0) || (this.idRessource == 'mcred')) {
+       this.ressource.production--;
+       this.notifyChange.emit(0);
+     }
   }
 
-  openDialogProduction() : void {
+  augmenterProduction() : void {
      this.ressource.production++;
      this.notifyChange.emit(0);
   }
 
   openDialogQte() : void {
-     this.deltaValue = 0;
-     $(this.el.nativeElement).dialog( "open" );
+     this.numpad.open();
   }
 
-  closeDialogQte() : void {
-     $(this.el.nativeElement).dialog( "close" );  
-      this.applyDelta();   
-     if (this.deltaValue != 0) {
-         this.notifyChange.emit(0);
+  applyDeltaQte(value : number) : void {
+     if (this.applyDelta(value)) {
+         $(this.numpad.nativeElement).dialog( "close" );  
+         if (value != 0) {
+             this.notifyChange.emit(0);
+         }
+         if (((this.idRessource == 'plante') || (this.idRessource == 'chaleur')) && (value < 0) && ((value % 8) == 0)) {
+           var deltaNT : number = value / -8;
+           if (window.confirm('Augmenter le NT de ' + deltaNT + ' ?')) {
+             this.notifyNT.emit(deltaNT);
+           }
+         }
      }
   }
-
-  reverseDeltaValue() : void {
-        this.deltaValue = 0 - this.deltaValue;
-  }
-
-  clearDeltaValue() : void {
-        this.deltaValue = 0;
-  }
-
-  addDelta(value : number) : void {
-    if (this.deltaValue == 0) {
-       this.deltaValue = 0 - value;
-    }
-    else if (this.deltaValue < 0) {
-        if (this.deltaValue > -10) {
-            this.deltaValue = this.deltaValue*10 - value;
-        }
-    }
-    else {
-        if (this.deltaValue < 10) {
-            this.deltaValue = this.deltaValue*10 + value;
-        }
-    }
-  }
-
-  setDelta(value : number) : void {
-    this.deltaValue = value;
-  } 
 
   applyChaleur(chaleur : number) : void {
      if (chaleur == 0) {
         return;
     }
     if (this.idRessource == 'energie') {
-       this.deltaValue = 0 - chaleur;
-       this.applyDelta();
+       this.applyDelta(0 - chaleur);
     }
     else if (this.idRessource == 'chaleur') {
-       this.deltaValue = chaleur;
-     console.log("chaleur avant:" + this.ressource.qte);
-       this.applyDelta();
-     console.log("chaleur apres:" + this.ressource.qte);
+       this.applyDelta(chaleur);
     }
-  }
-
-  applyDelta() : void {
-     if (this.deltaValue == 0) {
-        return;
-    }
-     $( '.qteDelta.' + this.idRessource ).removeAttr( "style" ).hide().fadeIn();
-      $( '.qteDelta.' + this.idRessource).hide( "drop", { direction: (this.deltaValue > 0 ? "up": "down") }, "slow", function() { this.deltaValue = 0;});
-        this.ressource.qte += this.deltaValue;
   }
 
   applyProduction(nt : number) : void {
-     this.deltaValue = this.ressource.production;
-     if (this.idRessource == 'mcred') {
-         this.deltaValue += nt;
-     }
-     this.applyDelta();
+     this.applyDelta(this.ressource.production + (this.idRessource == 'mcred' ? nt : 0));
   }
+
+  applyDelta(deltaValue : number) : boolean {
+     if (deltaValue == 0) {
+        return true;
+    }
+    if (deltaValue + this.ressource.qte < 0) {
+        window.alert('Pas assez de ressources disponibles !');
+        return false;
+    }
+     this.posDelta.nativeElement.innerHTML = (deltaValue > 0 ? '+ ' + deltaValue : '');
+     this.negDelta.nativeElement.innerHTML = (deltaValue < 0 ? deltaValue : '');
+     $( '.qteDelta.' + this.idRessource ).removeAttr( "style" ).hide().fadeIn();
+     $( '.qteDelta.' + this.idRessource).hide( "drop", { direction: (deltaValue > 0 ? "up": "down") }, "slow" );
+     this.ressource.qte += deltaValue;
+     return true;
+  }
+
 }

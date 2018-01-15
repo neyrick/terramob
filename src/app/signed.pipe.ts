@@ -5,7 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SignedPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  transform(value: any, doPerform: boolean = true): any {
+    if (!doPerform) {
+      return value;
+    }
     if (isNaN(value)) {
         return '-';
     }

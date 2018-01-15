@@ -1,0 +1,9 @@
+<div title="{{ title }}">
+
+  <table>
+    <tr><td class="numpadDigit" (click)="addValue(1)">1</td><td class="numpadDigit" (click)="addValue(2)">2</td><td class="numpadDigit" (click)="addValue(3)">3</td><td id="valueDisplay" rowspan="4"(click)="validateValue()" [ngClass]="value > 0 ? 'greenText' : 'redText'"> {{ value | signed : showPlus}}</td></tr>
+    <tr><td class="numpadDigit" (click)="addValue(4)">4</td><td class="numpadDigit" (click)="addValue(5)">5</td><td class="numpadDigit" (click)="addValue(6)">6</td></tr>
+    <tr><td class="numpadDigit" (click)="addValue(7)">7</td><td class="numpadDigit" (click)="addValue(8)">8</td><td class="numpadDigit" (click)="addValue(9)">9</td></tr>
+    <tr><td class="numpadDigit" (click)="addValue(0)">0</td><td class="numpadDigit" (click)="reverseValue()">+/-</td><td class="numpadDigit" (click)="clearValue()">C</td></tr>
+   </table>
+</div>

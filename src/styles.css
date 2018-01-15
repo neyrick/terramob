@@ -26,17 +26,19 @@ div#topmenu div{
 div#ntBloc div{
     display: inline-block;    
 }
-div.roundButton{
+div.ntButton {
   height: 100px;
   width: 100px;
+}
+div.roundButton{
   background-repeat: no-repeat;
   background-position: center;
    cursor:pointer;
 }
-div#minusNt{
+div.minusButton{
   background-image: url('assets/minus.gif');
 }
-div#plusNt{
+div.plusButton{
   background-image: url('assets/plus.gif');
 }
 div#nextTurnButton{
@@ -91,9 +93,9 @@ div.blocRessource {
 
 div.plaque {
   height: 85px;
-  width: 230px;
+  width: 430px;
   border: none;
-  background-repeat: round;
+  background-repeat: no-repeat;
   background-position: center;
   text-align: right;
   font-size: 60px;
@@ -104,12 +106,19 @@ div.plaque {
 div#ntDisplay {
   display: inline-block;
   background-image: url('assets/plaque-nt.png');
+  width: 200px;
+}
+div.plaque div{
+  display: inline-block;
 }
 div#tourDisplay {
   background-image: url('assets/plaque.png');
   text-align: center;
   padding-right: 0px;
   width: 260px;
+}
+.noTitle .ui-dialog-titlebar {
+    display: none;
 }
 div.productionRessource {
   background-image: url('assets/plaque-prod.png');
