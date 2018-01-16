@@ -1,3 +1,10 @@
+/* Themes */
+.btn.themeOrange {
+    border-color: rgb(200,100,0);
+    color: rgb(200,100,0);
+}
+/* Fin des themes */
+
 @font-face {
     font-family: 'alarm_clockregular';
     src: url('assets/alarm_clock-webfont.woff2') format('woff2'),
@@ -8,6 +15,8 @@
 body {
   margin: 2em;  
     font-family: 'arial';
+    background-color: black;
+  color: white;
 }
 span.digits {
   font-family: 'alarm_clockregular';
@@ -18,36 +27,34 @@ span.digits {
 .redText {
   color: red;
 }
-
 div#topmenu div{
     display: inline-block;
-    float:left;
 }
 div#ntBloc div{
     display: inline-block;    
 }
-div.ntButton {
-  height: 100px;
-  width: 100px;
+div.buttonMinus, div.buttonPlus {
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(200,100,0,.5);
+    cursor:pointer;
 }
-div.roundButton{
-  background-repeat: no-repeat;
-  background-position: center;
-   cursor:pointer;
-}
-div.minusButton{
+div.buttonMinus {  
   background-image: url('assets/minus.gif');
 }
-div.plusButton{
+div.buttonPlus {
   background-image: url('assets/plus.gif');
 }
 div#nextTurnButton{
   background-image: url('assets/nextturn.gif');
 }
 
-div.btn{border:#BBB 1px solid; color:#5f5e5e; display:block; float:left; padding:12px 15px; margin-right:10px; cursor:pointer;
-    font-size: 60px;}
-div:hover.btn{text-decoration:none; background:#FFF;}
+div.btn{border-width: 2px; border-style: solid; display:block; padding:12px 15px; margin-right:10px; cursor:pointer;
+    font-size: 3em;}
+div:hover.active{text-decoration:none; background:#FFF;}
  
 .rounded, div.btn{
 -webkit-border-radius:6px;
@@ -55,29 +62,23 @@ div:hover.btn{text-decoration:none; background:#FFF;}
 border-radius:6px;
 -khtml-border-radius: 6px;
 }
- 
-.shadow, div.btn{
--moz-box-shadow: 0px 1px 3px #AAA;
--webkit-box-shadow: 0px 1px 3px #AAA;
-box-shadow: 0px 1px 3px #AAA;
-}
- 
-.gradient, div.btn{
-background: #FFF; /* for non-css3 browsers */
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#DDDDDD'); /* for IE */
-background: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#DDD)); /* for webkit browsers */
-background: -moz-linear-gradient(top,  #FFF,  #DDD); /* for firefox 3.6+ */
-}
+
 div.tabressources {
-  width: 96%;
+  width: 100%;
   padding: 0px;
   clear: both;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 div.blocRessource {
   float: left;
   width: 31%;
-  padding: 10px;
-}
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+ }
 @media all and (orientation:landscape)
 {
     div.blocRessource {
@@ -90,39 +91,39 @@ div.blocRessource {
       width: 46%;
     }
 }
-
-div.plaque {
-  height: 85px;
-  width: 430px;
-  border: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  text-align: right;
-  font-size: 60px;
-  color: white;
-  padding-right: 30px;
-  padding-top: 15px;
+.genDialog {
+  background-color: black;  
 }
-div#ntDisplay {
+div.plaque {
   display: inline-block;
-  background-image: url('assets/plaque-nt.png');
-  width: 200px;
+  border: 2px solid #CCCCCC;
+  text-align: right;
+  font-size: 3em;
+  border-radius: 15px;
+  padding: 10px;
 }
 div.plaque div{
   display: inline-block;
 }
-div#tourDisplay {
-  background-image: url('assets/plaque.png');
-  text-align: center;
-  padding-right: 0px;
-  width: 260px;
+div#ntBloc {
+  float: left;
+}
+div#tourBloc, div#endGameButton {
+  float: right;
+  margin-right: 2%;
+}
+div#ntDisplay {
+    background-repeat: no-repeat;
+    background-position: l10px center;
+  background-image: url('assets/nt_logo_small.gif');
+    width: 150px;
+    text-align: right;
+}
+div#ntBloc div, div#tourBloc div {
+   vertical-align:middle;
 }
 .noTitle .ui-dialog-titlebar {
     display: none;
-}
-div.productionRessource {
-  background-image: url('assets/plaque-prod.png');
-
 }
 div.sousBlocRessource.mcred {
   background-image: url('assets/bg-mcred.jpg');
@@ -160,6 +161,15 @@ div.sousBlocRessource.chaleur {
 div.qteRessource.chaleur {
   background-image: url('assets/res-chaleur.png');
 }
-
+div.productionDisplayIcon {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(200,100,0,.5);
+    background-image: url('assets/turn.gif');
+    margin-right: 10px;
+}
 
 

@@ -31,6 +31,7 @@ export class AppComponent implements OnInit {
     else {
         this.reset();
     }
+
   }
 
   ngAfterViewInit() : void {

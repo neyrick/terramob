@@ -9,3 +9,14 @@ td.deltaDigit:active {
   background-color: black;
   color: white;  
 }
+div#resetButton, div#rewindButton {
+  float: left;
+}
+div#endGameButton {
+  float: right;
+}
+div#appContainer {
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}

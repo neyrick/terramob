@@ -33,8 +33,10 @@ export class NumpadComponent implements OnInit, AfterViewInit {
     $(this.nativeElement).dialog({
       autoOpen: false,
       modal: true,
+      width: '450px',
       show: { effect: "drop", duration: 400, direction : 'up' },
       hide: { effect: "drop", duration: 400, direction : 'up' },
+      classes: { "ui-dialog" : "noTitle genDialog" },
     });
   }
 

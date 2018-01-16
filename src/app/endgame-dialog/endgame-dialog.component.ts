@@ -3,6 +3,8 @@ import { NumpadComponent } from '../numpad/numpad.component';
 
 import { EtatTour, Scores } from '../classes';
 
+import { confirmDialog } from '../dialogs';
+
 @Component({
   selector: 'app-endgame-dialog',
   templateUrl: './endgame-dialog.component.html',
@@ -37,13 +39,13 @@ export class EndgameDialogComponent implements OnInit {
       modal: true,
       show: { effect: "drop", duration: 400, direction : 'up' },
       hide: { effect: "drop", duration: 400, direction : 'up' },
-      classes: { "ui-dialog" : "noTitle" },
-      width: 'auto',
+      classes: { "ui-dialog" : "noTitle genDialog" },
+      width: '550',
     });
   }
 
   recommencer() : void {
-    if (window.confirm('On efface tout et on recommence ?')) {
+    if (confirmDialog('On efface tout et on recommence ?')) {
       $(this.nativeElement).dialog("close");
       this.restartEmitter.emit('go');
     }

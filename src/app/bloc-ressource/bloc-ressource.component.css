@@ -2,13 +2,16 @@ div.sousBlocRessource {
   min-width: 260px;
   background-repeat: no-repeat;
   background-position: center;
-  border: 2px solid black;
-  border-radius: 25px;
+  border: 2px solid #CCCCCC;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   background-blend-mode: multiply;
   background-color: rgba(200,100,0,.5);
 }
-div.sousBlocRessource {
-  background-color: rgba(0,50,100,.5);
+div.sousBlocProduction {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 2px solid #CCCCCC;
 }
 div.qteRessource {
   min-height: 210px;
@@ -38,16 +41,26 @@ td#deltaDisplay {
   width: 120px;
   cursor:pointer;
 }
+div.productionRessource  div{
+    display: inline-block;
+    vertical-align: middle;
+}
 div.productionRessource {
   margin-left: auto ;
   margin-right: auto ;
+  height: 60px;
+  width: 250px;
+  padding-top: 5px;
 }
-div.productionValue {
-  width: 200px;
+div.productionDisplay {
+    width: 150px;
+    background-color: black;
+    color: rgb(200,100,0);
+    text-align: center;
 }
-div.prodButton {
-  height: 100px;
-  width: 100px;
+div.sousBlocProduction div.productionDisplayValue {
+    vertical-align: top;
+    font-size: 3em;
 }
 div.qteDelta {
     position: absolute;

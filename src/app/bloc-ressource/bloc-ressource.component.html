@@ -5,8 +5,10 @@
         <div class="qteDelta {{ idRessource }}"><span #posDelta class="digits greenText"></span><span #negDelta class="digits redText"></span></div>            
         <div><span class="digits">{{ ressource.qte }}</span></div>            
     </div>
-    <div class="productionRessource plaque">
-          <div class="prodButton minusButton roundButton" (click)="diminuerProduction()"> </div><div class="productionValue"><span class="digits">{{ ressource.production }}</span></div><div class="prodButton plusButton roundButton" (click)="augmenterProduction()"> </div>
+  </div>
+  <div class="sousBlocProduction ">
+    <div class="productionRessource">
+        <div class="buttonMinus" (click)="diminuerProduction()"></div><div class="productionDisplay"><div class="productionDisplayIcon"></div><div class="productionDisplayValue"><span class="digits">{{ ressource.production }}</span></div></div><div class="buttonPlus" (click)="augmenterProduction()"> </div>
         </div>
   </div>
 </div>

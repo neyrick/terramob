@@ -2,7 +2,7 @@
 
   <div id="endGameRessources">
     <table>
-      <thead><tr><th>Ressources</th></tr></thead>
+      <thead><tr><td colspan="3">Ressources</td></tr></thead>
       <tbody>
         <tr><td class="endGameRessourceLabel mcred">MégaCrédits</td><td class="endGameRessourceValue">{{ etat.mcred.qte }}</td><td class="endGameRessourceProduction">{{ etat.mcred.production }}</td></tr>
         <tr><td class="endGameRessourceLabel acier">Acier</td><td class="endGameRessourceValue">{{ etat.acier.qte }}</td><td class="endGameRessourceProduction">{{ etat.acier.production }}</td></tr>
@@ -16,23 +16,28 @@
 
   <div id="endGamePoints">
     <table>
-      <thead><tr><th>Score</th></tr></thead>
+      <thead><tr><td colspan="3">Score</td></tr></thead>
       <tbody>
-        <tr><td>NT</td><td>{{ etat.nt }}</td></tr>
-        <tr (click)="setScore('objectifs')"><td>Objectifs</td><td>{{ scores.objectifs }}</td></tr>
-        <tr (click)="setScore('recompenses')"><td>Récompenses</td><td>{{ scores.recompenses }}</td></tr>
-        <tr (click)="setScore('forets')"><td>Forêts</td><td>{{ scores.forets }}</td></tr>
-        <tr (click)="setScore('cites')"><td>Cités</td><td>{{ scores.cites }}</td></tr>
-        <tr (click)="setScore('cartes')"><td>Cartes</td>{{ scores.cartes }}<td></td></tr>
-        <tr><td>TOTAL</td><td>{{ total }}</td></tr>
+        <tr><td class="scoreLabel">NT</td><td class="endGameScore">{{ etat.nt }}</td></tr>
+        <tr (click)="setScore('objectifs')"><td class="scoreLabel">Objectifs</td><td class="endGameScore">{{ scores.objectifs }}</td></tr>
+        <tr (click)="setScore('recompenses')"><td class="scoreLabel">Récompenses</td><td class="endGameScore">{{ scores.recompenses }}</td></tr>
+        <tr (click)="setScore('forets')"><td class="scoreLabel">Forêts</td><td class="endGameScore">{{ scores.forets }}</td></tr>
+        <tr (click)="setScore('cites')"><td class="scoreLabel">Cités</td><td class="endGameScore">{{ scores.cites }}</td></tr>
+        <tr (click)="setScore('cartes')"><td class="scoreLabel">Cartes</td><td class="endGameScore">{{ scores.cartes }}</td></tr>
+        
       </tbody>
     </table>
   </div>
 
+  <div id="endGameTotal">
+     <div id="endGameTotalLabel">TOTAL:</div>
+     <div id="endGameTotalValue">{{ total }}</div>
+  </div>
+    
+
+
 <app-numpad [title]="'Score'" [defMultiplier]="1" [maxDigits]="2" (validateEmitter)="applyScore($event)"></app-numpad>
 
-  <div>
-    <div class="btn shadow rounded gradient" (click)="recommencer()">Recommencer</div>
-  </div>
+    <div id="restartButton" class="btn rounded" (click)="recommencer()">Recommencer</div>
 
 </div>
