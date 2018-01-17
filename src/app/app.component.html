@@ -41,6 +41,6 @@
 
 
  <app-colorpicker (colorEmitter)="setColor($event)"></app-colorpicker>
- <app-endgame-dialog [themeColor]="themeColor" [etat]="partie.etat" [scores]="partie.scores" (restartEmitter)="reset($event)"></app-endgame-dialog> 
+ <app-endgame-dialog [themeColor]="themeColor" [etat]="partie.etat" [scores]="partie.scores" (restartEmitter)="reset($event)" (saveEmitter)="save()"></app-endgame-dialog> 
 
 

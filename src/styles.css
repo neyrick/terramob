@@ -107,6 +107,9 @@ div#cardsDialog, table#cardsTable {
 .genDialog .ui-dialog-buttonpane button {
   background-color: black;
 }
+.ui-dialog-content {
+  background: none !important;
+}
 div.plaque {
   display: inline-block;
   border-width: 2px;

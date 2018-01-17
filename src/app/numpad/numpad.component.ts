@@ -38,12 +38,12 @@ export class NumpadComponent implements OnInit, AfterViewInit {
       width: '450px',
       show: { effect: "drop", duration: 400, direction : 'up' },
       hide: { effect: "drop", duration: 400, direction : 'up' },
-      classes: { "ui-dialog" : "noTitle genDialog" },
+      classes: { "ui-dialog" : "noTitle genDialog " + this.themeColor},
     });
   }
 
-  open() : void {
-     this.value = 0;
+  open(newvalue : number = 0) : void {
+     this.value = newvalue;
      $(this.nativeElement).dialog( "open" );
   }
 

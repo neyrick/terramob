@@ -14,7 +14,8 @@ td.numpadDigit:active {
   color: white;  
 }
 td#valueDisplay {
-  width: 150px;
+  width: 200px;
   font-size: 4em;
   text-align: right;
 }
+

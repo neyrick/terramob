@@ -36,7 +36,7 @@
     
 
 
-<app-numpad [title]="'Score'" [defMultiplier]="1" [maxDigits]="2" (validateEmitter)="applyScore($event)"></app-numpad>
+<app-numpad [title]="'Score'" [themeColor]="themeColor" [defMultiplier]="1" [maxDigits]="2" (validateEmitter)="applyScore($event)"></app-numpad>
 
     <div id="restartButton" class="btn rounded" (click)="recommencer()">Recommencer</div>
 

@@ -2,7 +2,7 @@ import { Component, ViewChild, ElementRef, Input, Output, EventEmitter, AfterVie
 import { EtatRessource } from '../classes';
 import { NumpadComponent } from '../numpad/numpad.component';
 import {SignedPipe} from '../signed.pipe';
-import { confirmDialog } from '../dialogs';
+import { confirmDialog, alertDialog } from '../dialogs';
 
 declare var $:any;
 
@@ -80,7 +80,7 @@ export class BlocRessourceComponent {
         return true;
     }
     if (deltaValue + this.ressource.qte < 0) {
-        window.alert('Pas assez de ressources disponibles !');
+        alertDialog('Pas assez de ressources disponibles !', this.themeColor);
         return false;
     }
      this.posDelta.nativeElement.innerHTML = (deltaValue > 0 ? '+ ' + deltaValue : '');

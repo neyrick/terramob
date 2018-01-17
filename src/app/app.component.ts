@@ -108,7 +108,7 @@ export class AppComponent implements OnInit {
         this.save();
      }
   }
-onfir
+
   save() : void {
      window.localStorage.setItem("terramob.tour", JSON.stringify(this.partie.tour));
      window.localStorage.setItem("terramob.historique", JSON.stringify(this.partie.historique));
@@ -139,6 +139,9 @@ onfir
              };
          } });
       }
+     else {
+                  $(this.cardsDialog.nativeElement).dialog("close");
+     }
      }).catch((reason) => {});
   }
 

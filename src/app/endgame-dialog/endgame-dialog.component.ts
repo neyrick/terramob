@@ -20,6 +20,8 @@ export class EndgameDialogComponent implements OnInit {
 
   @Output() restartEmitter: EventEmitter<string> = new EventEmitter();
 
+  @Output() saveEmitter: EventEmitter<string> = new EventEmitter();
+
   @Input() themeColor : string;
 
   nativeElement : ElementRef;
@@ -55,7 +57,13 @@ export class EndgameDialogComponent implements OnInit {
 
   setScore(field : string) : void {
     this.currentField = field;
-    this.numpad.open();
+    switch(this.currentField) {
+      case 'objectifs': this.numpad.open(this.scores.objectifs);
+      case 'recompenses': this.numpad.open(this.scores.recompenses);
+      case 'forets': this.numpad.open(this.scores.forets);
+      case 'cites': this.numpad.open(this.scores.cites);
+      case 'cartes': this.numpad.open(this.scores.cartes);
+    }
   }
 
   applyScore(value : number) : void {
@@ -66,6 +74,7 @@ export class EndgameDialogComponent implements OnInit {
       case 'cites': this.scores.cites = value; break;
       case 'cartes': this.scores.cartes = value; break;
     }
+    this.saveEmitter.emit('go');
     this.calculer();
     this.numpad.close();
   }
