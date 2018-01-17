@@ -1,6 +1,6 @@
 <div id="colorPickerContainer">
   <div id="colorsGrid">
-      <div *ngFor="let color of colorList" class="colorCell" (click)="selectColor(color)" [ngClass]="color"><span *ngIf="selectedColor == color">X</span></div>
+      <div *ngFor="let color of colorList" class="colorCell" (click)="selectColor(color)" [ngClass]="color"><img src="../../assets/brush.png" class="brushMark" width="20" height="20" *ngIf="selectedColor == color"/></div>
   </div>
   <div id="colorsButtons">
       <div id="closeColorPickerButton" class="btn rounded" [ngClass]="selectedColor" (click)="close()">Fermer</div>

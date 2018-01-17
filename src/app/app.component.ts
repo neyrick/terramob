@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
 
   partie: Partie = new Partie();
 
-  themeColor : string = 'theme-vert';
+  themeColor : string = 'theme-FFFFFF';
 
   ngOnInit() {
     $(this.cardsDialog.nativeElement).dialog({
@@ -116,6 +116,7 @@ onfir
      window.localStorage.setItem("terramob.modifie", JSON.stringify(this.partie.modifie));
      window.localStorage.setItem("terramob.terminee", JSON.stringify(this.partie.terminee));
      window.localStorage.setItem("terramob.scores", JSON.stringify(this.partie.scores));
+     window.localStorage.setItem("terramob.theme", JSON.stringify(this.themeColor));
   }
 
   load() : void {
@@ -125,6 +126,7 @@ onfir
      this.partie.modifie = JSON.parse(window.localStorage.getItem("terramob.modifie"));
      this.partie.terminee = JSON.parse(window.localStorage.getItem("terramob.terminee"));
      this.partie.scores = JSON.parse(window.localStorage.getItem("terramob.scores"));
+     this.themeColor = JSON.parse(window.localStorage.getItem("terramob.theme"));
   }
 
   confirmCard(nbCards : number) : void {
@@ -146,5 +148,6 @@ onfir
 
   setColor(color) {
     this.themeColor = color;
+    this.save();
   }
 }

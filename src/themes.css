@@ -1,16 +1,1081 @@
-.theme-vert, .theme-vert .ui-button, .theme-vert .ui-widget-content {
-    background-color: rgb(0,200,0);
-    border-color: rgb(0,200,0);
-    color: rgb(0,200,0);
+.theme-000000, .theme-000000 .ui-button, .theme-000000 .ui-widget-content { 
+  background-color: #000000;
+  border-color: #000000;
+  color: #000000;
 }
-.theme-rouge, .theme-rouge .ui-button, .theme-rouge .ui-widget-content {
-    background-color: rgb(200,0,0);
-    border-color: rgb(200,0,0);
-    color: rgb(200,0,0);
+.theme-000033, .theme-000033 .ui-button, .theme-000033 .ui-widget-content { 
+  background-color: #000033;
+  border-color: #000033;
+  color: #000033;
 }
-.theme-bleu, .theme-bleu .ui-button, .theme-bleu .ui-widget-content {
-    background-color: rgb(0,0,200);
-    border-color: rgb(0,0,200);
-    color: rgb(0,0,200);
+.theme-000066, .theme-000066 .ui-button, .theme-000066 .ui-widget-content { 
+  background-color: #000066;
+  border-color: #000066;
+  color: #000066;
+}
+.theme-000099, .theme-000099 .ui-button, .theme-000099 .ui-widget-content { 
+  background-color: #000099;
+  border-color: #000099;
+  color: #000099;
+}
+.theme-0000CC, .theme-0000CC .ui-button, .theme-0000CC .ui-widget-content { 
+  background-color: #0000CC;
+  border-color: #0000CC;
+  color: #0000CC;
+}
+.theme-0000FF, .theme-0000FF .ui-button, .theme-0000FF .ui-widget-content { 
+  background-color: #0000FF;
+  border-color: #0000FF;
+  color: #0000FF;
+}
+.theme-003300, .theme-003300 .ui-button, .theme-003300 .ui-widget-content { 
+  background-color: #003300;
+  border-color: #003300;
+  color: #003300;
+}
+.theme-003333, .theme-003333 .ui-button, .theme-003333 .ui-widget-content { 
+  background-color: #003333;
+  border-color: #003333;
+  color: #003333;
+}
+.theme-003366, .theme-003366 .ui-button, .theme-003366 .ui-widget-content { 
+  background-color: #003366;
+  border-color: #003366;
+  color: #003366;
+}
+.theme-003399, .theme-003399 .ui-button, .theme-003399 .ui-widget-content { 
+  background-color: #003399;
+  border-color: #003399;
+  color: #003399;
+}
+.theme-0033CC, .theme-0033CC .ui-button, .theme-0033CC .ui-widget-content { 
+  background-color: #0033CC;
+  border-color: #0033CC;
+  color: #0033CC;
+}
+.theme-0033FF, .theme-0033FF .ui-button, .theme-0033FF .ui-widget-content { 
+  background-color: #0033FF;
+  border-color: #0033FF;
+  color: #0033FF;
+}
+.theme-006600, .theme-006600 .ui-button, .theme-006600 .ui-widget-content { 
+  background-color: #006600;
+  border-color: #006600;
+  color: #006600;
+}
+.theme-006633, .theme-006633 .ui-button, .theme-006633 .ui-widget-content { 
+  background-color: #006633;
+  border-color: #006633;
+  color: #006633;
+}
+.theme-006666, .theme-006666 .ui-button, .theme-006666 .ui-widget-content { 
+  background-color: #006666;
+  border-color: #006666;
+  color: #006666;
+}
+.theme-006699, .theme-006699 .ui-button, .theme-006699 .ui-widget-content { 
+  background-color: #006699;
+  border-color: #006699;
+  color: #006699;
+}
+.theme-0066CC, .theme-0066CC .ui-button, .theme-0066CC .ui-widget-content { 
+  background-color: #0066CC;
+  border-color: #0066CC;
+  color: #0066CC;
+}
+.theme-0066FF, .theme-0066FF .ui-button, .theme-0066FF .ui-widget-content { 
+  background-color: #0066FF;
+  border-color: #0066FF;
+  color: #0066FF;
+}
+.theme-009900, .theme-009900 .ui-button, .theme-009900 .ui-widget-content { 
+  background-color: #009900;
+  border-color: #009900;
+  color: #009900;
+}
+.theme-009933, .theme-009933 .ui-button, .theme-009933 .ui-widget-content { 
+  background-color: #009933;
+  border-color: #009933;
+  color: #009933;
+}
+.theme-009966, .theme-009966 .ui-button, .theme-009966 .ui-widget-content { 
+  background-color: #009966;
+  border-color: #009966;
+  color: #009966;
+}
+.theme-009999, .theme-009999 .ui-button, .theme-009999 .ui-widget-content { 
+  background-color: #009999;
+  border-color: #009999;
+  color: #009999;
+}
+.theme-0099CC, .theme-0099CC .ui-button, .theme-0099CC .ui-widget-content { 
+  background-color: #0099CC;
+  border-color: #0099CC;
+  color: #0099CC;
+}
+.theme-0099FF, .theme-0099FF .ui-button, .theme-0099FF .ui-widget-content { 
+  background-color: #0099FF;
+  border-color: #0099FF;
+  color: #0099FF;
+}
+.theme-00CC00, .theme-00CC00 .ui-button, .theme-00CC00 .ui-widget-content { 
+  background-color: #00CC00;
+  border-color: #00CC00;
+  color: #00CC00;
+}
+.theme-00CC33, .theme-00CC33 .ui-button, .theme-00CC33 .ui-widget-content { 
+  background-color: #00CC33;
+  border-color: #00CC33;
+  color: #00CC33;
+}
+.theme-00CC66, .theme-00CC66 .ui-button, .theme-00CC66 .ui-widget-content { 
+  background-color: #00CC66;
+  border-color: #00CC66;
+  color: #00CC66;
+}
+.theme-00CC99, .theme-00CC99 .ui-button, .theme-00CC99 .ui-widget-content { 
+  background-color: #00CC99;
+  border-color: #00CC99;
+  color: #00CC99;
+}
+.theme-00CCCC, .theme-00CCCC .ui-button, .theme-00CCCC .ui-widget-content { 
+  background-color: #00CCCC;
+  border-color: #00CCCC;
+  color: #00CCCC;
+}
+.theme-00CCFF, .theme-00CCFF .ui-button, .theme-00CCFF .ui-widget-content { 
+  background-color: #00CCFF;
+  border-color: #00CCFF;
+  color: #00CCFF;
+}
+.theme-00FF00, .theme-00FF00 .ui-button, .theme-00FF00 .ui-widget-content { 
+  background-color: #00FF00;
+  border-color: #00FF00;
+  color: #00FF00;
+}
+.theme-00FF33, .theme-00FF33 .ui-button, .theme-00FF33 .ui-widget-content { 
+  background-color: #00FF33;
+  border-color: #00FF33;
+  color: #00FF33;
+}
+.theme-00FF66, .theme-00FF66 .ui-button, .theme-00FF66 .ui-widget-content { 
+  background-color: #00FF66;
+  border-color: #00FF66;
+  color: #00FF66;
+}
+.theme-00FF99, .theme-00FF99 .ui-button, .theme-00FF99 .ui-widget-content { 
+  background-color: #00FF99;
+  border-color: #00FF99;
+  color: #00FF99;
+}
+.theme-00FFCC, .theme-00FFCC .ui-button, .theme-00FFCC .ui-widget-content { 
+  background-color: #00FFCC;
+  border-color: #00FFCC;
+  color: #00FFCC;
+}
+.theme-00FFFF, .theme-00FFFF .ui-button, .theme-00FFFF .ui-widget-content { 
+  background-color: #00FFFF;
+  border-color: #00FFFF;
+  color: #00FFFF;
+}
+.theme-330000, .theme-330000 .ui-button, .theme-330000 .ui-widget-content { 
+  background-color: #330000;
+  border-color: #330000;
+  color: #330000;
+}
+.theme-330033, .theme-330033 .ui-button, .theme-330033 .ui-widget-content { 
+  background-color: #330033;
+  border-color: #330033;
+  color: #330033;
+}
+.theme-330066, .theme-330066 .ui-button, .theme-330066 .ui-widget-content { 
+  background-color: #330066;
+  border-color: #330066;
+  color: #330066;
+}
+.theme-330099, .theme-330099 .ui-button, .theme-330099 .ui-widget-content { 
+  background-color: #330099;
+  border-color: #330099;
+  color: #330099;
+}
+.theme-3300CC, .theme-3300CC .ui-button, .theme-3300CC .ui-widget-content { 
+  background-color: #3300CC;
+  border-color: #3300CC;
+  color: #3300CC;
+}
+.theme-3300FF, .theme-3300FF .ui-button, .theme-3300FF .ui-widget-content { 
+  background-color: #3300FF;
+  border-color: #3300FF;
+  color: #3300FF;
+}
+.theme-333300, .theme-333300 .ui-button, .theme-333300 .ui-widget-content { 
+  background-color: #333300;
+  border-color: #333300;
+  color: #333300;
+}
+.theme-333333, .theme-333333 .ui-button, .theme-333333 .ui-widget-content { 
+  background-color: #333333;
+  border-color: #333333;
+  color: #333333;
+}
+.theme-333366, .theme-333366 .ui-button, .theme-333366 .ui-widget-content { 
+  background-color: #333366;
+  border-color: #333366;
+  color: #333366;
+}
+.theme-333399, .theme-333399 .ui-button, .theme-333399 .ui-widget-content { 
+  background-color: #333399;
+  border-color: #333399;
+  color: #333399;
+}
+.theme-3333CC, .theme-3333CC .ui-button, .theme-3333CC .ui-widget-content { 
+  background-color: #3333CC;
+  border-color: #3333CC;
+  color: #3333CC;
+}
+.theme-3333FF, .theme-3333FF .ui-button, .theme-3333FF .ui-widget-content { 
+  background-color: #3333FF;
+  border-color: #3333FF;
+  color: #3333FF;
+}
+.theme-336600, .theme-336600 .ui-button, .theme-336600 .ui-widget-content { 
+  background-color: #336600;
+  border-color: #336600;
+  color: #336600;
+}
+.theme-336633, .theme-336633 .ui-button, .theme-336633 .ui-widget-content { 
+  background-color: #336633;
+  border-color: #336633;
+  color: #336633;
+}
+.theme-336666, .theme-336666 .ui-button, .theme-336666 .ui-widget-content { 
+  background-color: #336666;
+  border-color: #336666;
+  color: #336666;
+}
+.theme-336699, .theme-336699 .ui-button, .theme-336699 .ui-widget-content { 
+  background-color: #336699;
+  border-color: #336699;
+  color: #336699;
+}
+.theme-3366CC, .theme-3366CC .ui-button, .theme-3366CC .ui-widget-content { 
+  background-color: #3366CC;
+  border-color: #3366CC;
+  color: #3366CC;
+}
+.theme-3366FF, .theme-3366FF .ui-button, .theme-3366FF .ui-widget-content { 
+  background-color: #3366FF;
+  border-color: #3366FF;
+  color: #3366FF;
+}
+.theme-339900, .theme-339900 .ui-button, .theme-339900 .ui-widget-content { 
+  background-color: #339900;
+  border-color: #339900;
+  color: #339900;
+}
+.theme-339933, .theme-339933 .ui-button, .theme-339933 .ui-widget-content { 
+  background-color: #339933;
+  border-color: #339933;
+  color: #339933;
+}
+.theme-339966, .theme-339966 .ui-button, .theme-339966 .ui-widget-content { 
+  background-color: #339966;
+  border-color: #339966;
+  color: #339966;
+}
+.theme-339999, .theme-339999 .ui-button, .theme-339999 .ui-widget-content { 
+  background-color: #339999;
+  border-color: #339999;
+  color: #339999;
+}
+.theme-3399CC, .theme-3399CC .ui-button, .theme-3399CC .ui-widget-content { 
+  background-color: #3399CC;
+  border-color: #3399CC;
+  color: #3399CC;
+}
+.theme-3399FF, .theme-3399FF .ui-button, .theme-3399FF .ui-widget-content { 
+  background-color: #3399FF;
+  border-color: #3399FF;
+  color: #3399FF;
+}
+.theme-33CC00, .theme-33CC00 .ui-button, .theme-33CC00 .ui-widget-content { 
+  background-color: #33CC00;
+  border-color: #33CC00;
+  color: #33CC00;
+}
+.theme-33CC33, .theme-33CC33 .ui-button, .theme-33CC33 .ui-widget-content { 
+  background-color: #33CC33;
+  border-color: #33CC33;
+  color: #33CC33;
+}
+.theme-33CC66, .theme-33CC66 .ui-button, .theme-33CC66 .ui-widget-content { 
+  background-color: #33CC66;
+  border-color: #33CC66;
+  color: #33CC66;
+}
+.theme-33CC99, .theme-33CC99 .ui-button, .theme-33CC99 .ui-widget-content { 
+  background-color: #33CC99;
+  border-color: #33CC99;
+  color: #33CC99;
+}
+.theme-33CCCC, .theme-33CCCC .ui-button, .theme-33CCCC .ui-widget-content { 
+  background-color: #33CCCC;
+  border-color: #33CCCC;
+  color: #33CCCC;
+}
+.theme-33CCFF, .theme-33CCFF .ui-button, .theme-33CCFF .ui-widget-content { 
+  background-color: #33CCFF;
+  border-color: #33CCFF;
+  color: #33CCFF;
+}
+.theme-33FF00, .theme-33FF00 .ui-button, .theme-33FF00 .ui-widget-content { 
+  background-color: #33FF00;
+  border-color: #33FF00;
+  color: #33FF00;
+}
+.theme-33FF33, .theme-33FF33 .ui-button, .theme-33FF33 .ui-widget-content { 
+  background-color: #33FF33;
+  border-color: #33FF33;
+  color: #33FF33;
+}
+.theme-33FF66, .theme-33FF66 .ui-button, .theme-33FF66 .ui-widget-content { 
+  background-color: #33FF66;
+  border-color: #33FF66;
+  color: #33FF66;
+}
+.theme-33FF99, .theme-33FF99 .ui-button, .theme-33FF99 .ui-widget-content { 
+  background-color: #33FF99;
+  border-color: #33FF99;
+  color: #33FF99;
+}
+.theme-33FFCC, .theme-33FFCC .ui-button, .theme-33FFCC .ui-widget-content { 
+  background-color: #33FFCC;
+  border-color: #33FFCC;
+  color: #33FFCC;
+}
+.theme-33FFFF, .theme-33FFFF .ui-button, .theme-33FFFF .ui-widget-content { 
+  background-color: #33FFFF;
+  border-color: #33FFFF;
+  color: #33FFFF;
+}
+.theme-660000, .theme-660000 .ui-button, .theme-660000 .ui-widget-content { 
+  background-color: #660000;
+  border-color: #660000;
+  color: #660000;
+}
+.theme-660033, .theme-660033 .ui-button, .theme-660033 .ui-widget-content { 
+  background-color: #660033;
+  border-color: #660033;
+  color: #660033;
+}
+.theme-660066, .theme-660066 .ui-button, .theme-660066 .ui-widget-content { 
+  background-color: #660066;
+  border-color: #660066;
+  color: #660066;
+}
+.theme-660099, .theme-660099 .ui-button, .theme-660099 .ui-widget-content { 
+  background-color: #660099;
+  border-color: #660099;
+  color: #660099;
+}
+.theme-6600CC, .theme-6600CC .ui-button, .theme-6600CC .ui-widget-content { 
+  background-color: #6600CC;
+  border-color: #6600CC;
+  color: #6600CC;
+}
+.theme-6600FF, .theme-6600FF .ui-button, .theme-6600FF .ui-widget-content { 
+  background-color: #6600FF;
+  border-color: #6600FF;
+  color: #6600FF;
+}
+.theme-663300, .theme-663300 .ui-button, .theme-663300 .ui-widget-content { 
+  background-color: #663300;
+  border-color: #663300;
+  color: #663300;
+}
+.theme-663333, .theme-663333 .ui-button, .theme-663333 .ui-widget-content { 
+  background-color: #663333;
+  border-color: #663333;
+  color: #663333;
+}
+.theme-663366, .theme-663366 .ui-button, .theme-663366 .ui-widget-content { 
+  background-color: #663366;
+  border-color: #663366;
+  color: #663366;
+}
+.theme-663399, .theme-663399 .ui-button, .theme-663399 .ui-widget-content { 
+  background-color: #663399;
+  border-color: #663399;
+  color: #663399;
+}
+.theme-6633CC, .theme-6633CC .ui-button, .theme-6633CC .ui-widget-content { 
+  background-color: #6633CC;
+  border-color: #6633CC;
+  color: #6633CC;
+}
+.theme-6633FF, .theme-6633FF .ui-button, .theme-6633FF .ui-widget-content { 
+  background-color: #6633FF;
+  border-color: #6633FF;
+  color: #6633FF;
+}
+.theme-666600, .theme-666600 .ui-button, .theme-666600 .ui-widget-content { 
+  background-color: #666600;
+  border-color: #666600;
+  color: #666600;
+}
+.theme-666633, .theme-666633 .ui-button, .theme-666633 .ui-widget-content { 
+  background-color: #666633;
+  border-color: #666633;
+  color: #666633;
+}
+.theme-666666, .theme-666666 .ui-button, .theme-666666 .ui-widget-content { 
+  background-color: #666666;
+  border-color: #666666;
+  color: #666666;
+}
+.theme-666699, .theme-666699 .ui-button, .theme-666699 .ui-widget-content { 
+  background-color: #666699;
+  border-color: #666699;
+  color: #666699;
+}
+.theme-6666CC, .theme-6666CC .ui-button, .theme-6666CC .ui-widget-content { 
+  background-color: #6666CC;
+  border-color: #6666CC;
+  color: #6666CC;
+}
+.theme-6666FF, .theme-6666FF .ui-button, .theme-6666FF .ui-widget-content { 
+  background-color: #6666FF;
+  border-color: #6666FF;
+  color: #6666FF;
+}
+.theme-669900, .theme-669900 .ui-button, .theme-669900 .ui-widget-content { 
+  background-color: #669900;
+  border-color: #669900;
+  color: #669900;
+}
+.theme-669933, .theme-669933 .ui-button, .theme-669933 .ui-widget-content { 
+  background-color: #669933;
+  border-color: #669933;
+  color: #669933;
+}
+.theme-669966, .theme-669966 .ui-button, .theme-669966 .ui-widget-content { 
+  background-color: #669966;
+  border-color: #669966;
+  color: #669966;
+}
+.theme-669999, .theme-669999 .ui-button, .theme-669999 .ui-widget-content { 
+  background-color: #669999;
+  border-color: #669999;
+  color: #669999;
+}
+.theme-6699CC, .theme-6699CC .ui-button, .theme-6699CC .ui-widget-content { 
+  background-color: #6699CC;
+  border-color: #6699CC;
+  color: #6699CC;
+}
+.theme-6699FF, .theme-6699FF .ui-button, .theme-6699FF .ui-widget-content { 
+  background-color: #6699FF;
+  border-color: #6699FF;
+  color: #6699FF;
+}
+.theme-66CC00, .theme-66CC00 .ui-button, .theme-66CC00 .ui-widget-content { 
+  background-color: #66CC00;
+  border-color: #66CC00;
+  color: #66CC00;
+}
+.theme-66CC33, .theme-66CC33 .ui-button, .theme-66CC33 .ui-widget-content { 
+  background-color: #66CC33;
+  border-color: #66CC33;
+  color: #66CC33;
+}
+.theme-66CC66, .theme-66CC66 .ui-button, .theme-66CC66 .ui-widget-content { 
+  background-color: #66CC66;
+  border-color: #66CC66;
+  color: #66CC66;
+}
+.theme-66CC99, .theme-66CC99 .ui-button, .theme-66CC99 .ui-widget-content { 
+  background-color: #66CC99;
+  border-color: #66CC99;
+  color: #66CC99;
+}
+.theme-66CCCC, .theme-66CCCC .ui-button, .theme-66CCCC .ui-widget-content { 
+  background-color: #66CCCC;
+  border-color: #66CCCC;
+  color: #66CCCC;
+}
+.theme-66CCFF, .theme-66CCFF .ui-button, .theme-66CCFF .ui-widget-content { 
+  background-color: #66CCFF;
+  border-color: #66CCFF;
+  color: #66CCFF;
+}
+.theme-66FF00, .theme-66FF00 .ui-button, .theme-66FF00 .ui-widget-content { 
+  background-color: #66FF00;
+  border-color: #66FF00;
+  color: #66FF00;
+}
+.theme-66FF33, .theme-66FF33 .ui-button, .theme-66FF33 .ui-widget-content { 
+  background-color: #66FF33;
+  border-color: #66FF33;
+  color: #66FF33;
+}
+.theme-66FF66, .theme-66FF66 .ui-button, .theme-66FF66 .ui-widget-content { 
+  background-color: #66FF66;
+  border-color: #66FF66;
+  color: #66FF66;
+}
+.theme-66FF99, .theme-66FF99 .ui-button, .theme-66FF99 .ui-widget-content { 
+  background-color: #66FF99;
+  border-color: #66FF99;
+  color: #66FF99;
+}
+.theme-66FFCC, .theme-66FFCC .ui-button, .theme-66FFCC .ui-widget-content { 
+  background-color: #66FFCC;
+  border-color: #66FFCC;
+  color: #66FFCC;
+}
+.theme-66FFFF, .theme-66FFFF .ui-button, .theme-66FFFF .ui-widget-content { 
+  background-color: #66FFFF;
+  border-color: #66FFFF;
+  color: #66FFFF;
+}
+.theme-990000, .theme-990000 .ui-button, .theme-990000 .ui-widget-content { 
+  background-color: #990000;
+  border-color: #990000;
+  color: #990000;
+}
+.theme-990033, .theme-990033 .ui-button, .theme-990033 .ui-widget-content { 
+  background-color: #990033;
+  border-color: #990033;
+  color: #990033;
+}
+.theme-990066, .theme-990066 .ui-button, .theme-990066 .ui-widget-content { 
+  background-color: #990066;
+  border-color: #990066;
+  color: #990066;
+}
+.theme-990099, .theme-990099 .ui-button, .theme-990099 .ui-widget-content { 
+  background-color: #990099;
+  border-color: #990099;
+  color: #990099;
+}
+.theme-9900CC, .theme-9900CC .ui-button, .theme-9900CC .ui-widget-content { 
+  background-color: #9900CC;
+  border-color: #9900CC;
+  color: #9900CC;
+}
+.theme-9900FF, .theme-9900FF .ui-button, .theme-9900FF .ui-widget-content { 
+  background-color: #9900FF;
+  border-color: #9900FF;
+  color: #9900FF;
+}
+.theme-993300, .theme-993300 .ui-button, .theme-993300 .ui-widget-content { 
+  background-color: #993300;
+  border-color: #993300;
+  color: #993300;
+}
+.theme-993333, .theme-993333 .ui-button, .theme-993333 .ui-widget-content { 
+  background-color: #993333;
+  border-color: #993333;
+  color: #993333;
+}
+.theme-993366, .theme-993366 .ui-button, .theme-993366 .ui-widget-content { 
+  background-color: #993366;
+  border-color: #993366;
+  color: #993366;
+}
+.theme-993399, .theme-993399 .ui-button, .theme-993399 .ui-widget-content { 
+  background-color: #993399;
+  border-color: #993399;
+  color: #993399;
+}
+.theme-9933CC, .theme-9933CC .ui-button, .theme-9933CC .ui-widget-content { 
+  background-color: #9933CC;
+  border-color: #9933CC;
+  color: #9933CC;
+}
+.theme-9933FF, .theme-9933FF .ui-button, .theme-9933FF .ui-widget-content { 
+  background-color: #9933FF;
+  border-color: #9933FF;
+  color: #9933FF;
+}
+.theme-996600, .theme-996600 .ui-button, .theme-996600 .ui-widget-content { 
+  background-color: #996600;
+  border-color: #996600;
+  color: #996600;
+}
+.theme-996633, .theme-996633 .ui-button, .theme-996633 .ui-widget-content { 
+  background-color: #996633;
+  border-color: #996633;
+  color: #996633;
+}
+.theme-996666, .theme-996666 .ui-button, .theme-996666 .ui-widget-content { 
+  background-color: #996666;
+  border-color: #996666;
+  color: #996666;
+}
+.theme-996699, .theme-996699 .ui-button, .theme-996699 .ui-widget-content { 
+  background-color: #996699;
+  border-color: #996699;
+  color: #996699;
+}
+.theme-9966CC, .theme-9966CC .ui-button, .theme-9966CC .ui-widget-content { 
+  background-color: #9966CC;
+  border-color: #9966CC;
+  color: #9966CC;
+}
+.theme-9966FF, .theme-9966FF .ui-button, .theme-9966FF .ui-widget-content { 
+  background-color: #9966FF;
+  border-color: #9966FF;
+  color: #9966FF;
+}
+.theme-999900, .theme-999900 .ui-button, .theme-999900 .ui-widget-content { 
+  background-color: #999900;
+  border-color: #999900;
+  color: #999900;
+}
+.theme-999933, .theme-999933 .ui-button, .theme-999933 .ui-widget-content { 
+  background-color: #999933;
+  border-color: #999933;
+  color: #999933;
+}
+.theme-999966, .theme-999966 .ui-button, .theme-999966 .ui-widget-content { 
+  background-color: #999966;
+  border-color: #999966;
+  color: #999966;
+}
+.theme-999999, .theme-999999 .ui-button, .theme-999999 .ui-widget-content { 
+  background-color: #999999;
+  border-color: #999999;
+  color: #999999;
+}
+.theme-9999CC, .theme-9999CC .ui-button, .theme-9999CC .ui-widget-content { 
+  background-color: #9999CC;
+  border-color: #9999CC;
+  color: #9999CC;
+}
+.theme-9999FF, .theme-9999FF .ui-button, .theme-9999FF .ui-widget-content { 
+  background-color: #9999FF;
+  border-color: #9999FF;
+  color: #9999FF;
+}
+.theme-99CC00, .theme-99CC00 .ui-button, .theme-99CC00 .ui-widget-content { 
+  background-color: #99CC00;
+  border-color: #99CC00;
+  color: #99CC00;
+}
+.theme-99CC33, .theme-99CC33 .ui-button, .theme-99CC33 .ui-widget-content { 
+  background-color: #99CC33;
+  border-color: #99CC33;
+  color: #99CC33;
+}
+.theme-99CC66, .theme-99CC66 .ui-button, .theme-99CC66 .ui-widget-content { 
+  background-color: #99CC66;
+  border-color: #99CC66;
+  color: #99CC66;
+}
+.theme-99CC99, .theme-99CC99 .ui-button, .theme-99CC99 .ui-widget-content { 
+  background-color: #99CC99;
+  border-color: #99CC99;
+  color: #99CC99;
+}
+.theme-99CCCC, .theme-99CCCC .ui-button, .theme-99CCCC .ui-widget-content { 
+  background-color: #99CCCC;
+  border-color: #99CCCC;
+  color: #99CCCC;
+}
+.theme-99CCFF, .theme-99CCFF .ui-button, .theme-99CCFF .ui-widget-content { 
+  background-color: #99CCFF;
+  border-color: #99CCFF;
+  color: #99CCFF;
+}
+.theme-99FF00, .theme-99FF00 .ui-button, .theme-99FF00 .ui-widget-content { 
+  background-color: #99FF00;
+  border-color: #99FF00;
+  color: #99FF00;
+}
+.theme-99FF33, .theme-99FF33 .ui-button, .theme-99FF33 .ui-widget-content { 
+  background-color: #99FF33;
+  border-color: #99FF33;
+  color: #99FF33;
+}
+.theme-99FF66, .theme-99FF66 .ui-button, .theme-99FF66 .ui-widget-content { 
+  background-color: #99FF66;
+  border-color: #99FF66;
+  color: #99FF66;
+}
+.theme-99FF99, .theme-99FF99 .ui-button, .theme-99FF99 .ui-widget-content { 
+  background-color: #99FF99;
+  border-color: #99FF99;
+  color: #99FF99;
+}
+.theme-99FFCC, .theme-99FFCC .ui-button, .theme-99FFCC .ui-widget-content { 
+  background-color: #99FFCC;
+  border-color: #99FFCC;
+  color: #99FFCC;
+}
+.theme-99FFFF, .theme-99FFFF .ui-button, .theme-99FFFF .ui-widget-content { 
+  background-color: #99FFFF;
+  border-color: #99FFFF;
+  color: #99FFFF;
+}
+.theme-CC0000, .theme-CC0000 .ui-button, .theme-CC0000 .ui-widget-content { 
+  background-color: #CC0000;
+  border-color: #CC0000;
+  color: #CC0000;
+}
+.theme-CC0033, .theme-CC0033 .ui-button, .theme-CC0033 .ui-widget-content { 
+  background-color: #CC0033;
+  border-color: #CC0033;
+  color: #CC0033;
+}
+.theme-CC0066, .theme-CC0066 .ui-button, .theme-CC0066 .ui-widget-content { 
+  background-color: #CC0066;
+  border-color: #CC0066;
+  color: #CC0066;
+}
+.theme-CC0099, .theme-CC0099 .ui-button, .theme-CC0099 .ui-widget-content { 
+  background-color: #CC0099;
+  border-color: #CC0099;
+  color: #CC0099;
+}
+.theme-CC00CC, .theme-CC00CC .ui-button, .theme-CC00CC .ui-widget-content { 
+  background-color: #CC00CC;
+  border-color: #CC00CC;
+  color: #CC00CC;
+}
+.theme-CC00FF, .theme-CC00FF .ui-button, .theme-CC00FF .ui-widget-content { 
+  background-color: #CC00FF;
+  border-color: #CC00FF;
+  color: #CC00FF;
+}
+.theme-CC3300, .theme-CC3300 .ui-button, .theme-CC3300 .ui-widget-content { 
+  background-color: #CC3300;
+  border-color: #CC3300;
+  color: #CC3300;
+}
+.theme-CC3333, .theme-CC3333 .ui-button, .theme-CC3333 .ui-widget-content { 
+  background-color: #CC3333;
+  border-color: #CC3333;
+  color: #CC3333;
+}
+.theme-CC3366, .theme-CC3366 .ui-button, .theme-CC3366 .ui-widget-content { 
+  background-color: #CC3366;
+  border-color: #CC3366;
+  color: #CC3366;
+}
+.theme-CC3399, .theme-CC3399 .ui-button, .theme-CC3399 .ui-widget-content { 
+  background-color: #CC3399;
+  border-color: #CC3399;
+  color: #CC3399;
+}
+.theme-CC33CC, .theme-CC33CC .ui-button, .theme-CC33CC .ui-widget-content { 
+  background-color: #CC33CC;
+  border-color: #CC33CC;
+  color: #CC33CC;
+}
+.theme-CC33FF, .theme-CC33FF .ui-button, .theme-CC33FF .ui-widget-content { 
+  background-color: #CC33FF;
+  border-color: #CC33FF;
+  color: #CC33FF;
+}
+.theme-CC6600, .theme-CC6600 .ui-button, .theme-CC6600 .ui-widget-content { 
+  background-color: #CC6600;
+  border-color: #CC6600;
+  color: #CC6600;
+}
+.theme-CC6633, .theme-CC6633 .ui-button, .theme-CC6633 .ui-widget-content { 
+  background-color: #CC6633;
+  border-color: #CC6633;
+  color: #CC6633;
+}
+.theme-CC6666, .theme-CC6666 .ui-button, .theme-CC6666 .ui-widget-content { 
+  background-color: #CC6666;
+  border-color: #CC6666;
+  color: #CC6666;
+}
+.theme-CC6699, .theme-CC6699 .ui-button, .theme-CC6699 .ui-widget-content { 
+  background-color: #CC6699;
+  border-color: #CC6699;
+  color: #CC6699;
+}
+.theme-CC66CC, .theme-CC66CC .ui-button, .theme-CC66CC .ui-widget-content { 
+  background-color: #CC66CC;
+  border-color: #CC66CC;
+  color: #CC66CC;
+}
+.theme-CC66FF, .theme-CC66FF .ui-button, .theme-CC66FF .ui-widget-content { 
+  background-color: #CC66FF;
+  border-color: #CC66FF;
+  color: #CC66FF;
+}
+.theme-CC9900, .theme-CC9900 .ui-button, .theme-CC9900 .ui-widget-content { 
+  background-color: #CC9900;
+  border-color: #CC9900;
+  color: #CC9900;
+}
+.theme-CC9933, .theme-CC9933 .ui-button, .theme-CC9933 .ui-widget-content { 
+  background-color: #CC9933;
+  border-color: #CC9933;
+  color: #CC9933;
+}
+.theme-CC9966, .theme-CC9966 .ui-button, .theme-CC9966 .ui-widget-content { 
+  background-color: #CC9966;
+  border-color: #CC9966;
+  color: #CC9966;
+}
+.theme-CC9999, .theme-CC9999 .ui-button, .theme-CC9999 .ui-widget-content { 
+  background-color: #CC9999;
+  border-color: #CC9999;
+  color: #CC9999;
+}
+.theme-CC99CC, .theme-CC99CC .ui-button, .theme-CC99CC .ui-widget-content { 
+  background-color: #CC99CC;
+  border-color: #CC99CC;
+  color: #CC99CC;
+}
+.theme-CC99FF, .theme-CC99FF .ui-button, .theme-CC99FF .ui-widget-content { 
+  background-color: #CC99FF;
+  border-color: #CC99FF;
+  color: #CC99FF;
+}
+.theme-CCCC00, .theme-CCCC00 .ui-button, .theme-CCCC00 .ui-widget-content { 
+  background-color: #CCCC00;
+  border-color: #CCCC00;
+  color: #CCCC00;
+}
+.theme-CCCC33, .theme-CCCC33 .ui-button, .theme-CCCC33 .ui-widget-content { 
+  background-color: #CCCC33;
+  border-color: #CCCC33;
+  color: #CCCC33;
+}
+.theme-CCCC66, .theme-CCCC66 .ui-button, .theme-CCCC66 .ui-widget-content { 
+  background-color: #CCCC66;
+  border-color: #CCCC66;
+  color: #CCCC66;
+}
+.theme-CCCC99, .theme-CCCC99 .ui-button, .theme-CCCC99 .ui-widget-content { 
+  background-color: #CCCC99;
+  border-color: #CCCC99;
+  color: #CCCC99;
+}
+.theme-CCCCCC, .theme-CCCCCC .ui-button, .theme-CCCCCC .ui-widget-content { 
+  background-color: #CCCCCC;
+  border-color: #CCCCCC;
+  color: #CCCCCC;
+}
+.theme-CCCCFF, .theme-CCCCFF .ui-button, .theme-CCCCFF .ui-widget-content { 
+  background-color: #CCCCFF;
+  border-color: #CCCCFF;
+  color: #CCCCFF;
+}
+.theme-CCFF00, .theme-CCFF00 .ui-button, .theme-CCFF00 .ui-widget-content { 
+  background-color: #CCFF00;
+  border-color: #CCFF00;
+  color: #CCFF00;
+}
+.theme-CCFF33, .theme-CCFF33 .ui-button, .theme-CCFF33 .ui-widget-content { 
+  background-color: #CCFF33;
+  border-color: #CCFF33;
+  color: #CCFF33;
+}
+.theme-CCFF66, .theme-CCFF66 .ui-button, .theme-CCFF66 .ui-widget-content { 
+  background-color: #CCFF66;
+  border-color: #CCFF66;
+  color: #CCFF66;
+}
+.theme-CCFF99, .theme-CCFF99 .ui-button, .theme-CCFF99 .ui-widget-content { 
+  background-color: #CCFF99;
+  border-color: #CCFF99;
+  color: #CCFF99;
+}
+.theme-CCFFCC, .theme-CCFFCC .ui-button, .theme-CCFFCC .ui-widget-content { 
+  background-color: #CCFFCC;
+  border-color: #CCFFCC;
+  color: #CCFFCC;
+}
+.theme-CCFFFF, .theme-CCFFFF .ui-button, .theme-CCFFFF .ui-widget-content { 
+  background-color: #CCFFFF;
+  border-color: #CCFFFF;
+  color: #CCFFFF;
+}
+.theme-FF0000, .theme-FF0000 .ui-button, .theme-FF0000 .ui-widget-content { 
+  background-color: #FF0000;
+  border-color: #FF0000;
+  color: #FF0000;
+}
+.theme-FF0033, .theme-FF0033 .ui-button, .theme-FF0033 .ui-widget-content { 
+  background-color: #FF0033;
+  border-color: #FF0033;
+  color: #FF0033;
+}
+.theme-FF0066, .theme-FF0066 .ui-button, .theme-FF0066 .ui-widget-content { 
+  background-color: #FF0066;
+  border-color: #FF0066;
+  color: #FF0066;
+}
+.theme-FF0099, .theme-FF0099 .ui-button, .theme-FF0099 .ui-widget-content { 
+  background-color: #FF0099;
+  border-color: #FF0099;
+  color: #FF0099;
+}
+.theme-FF00CC, .theme-FF00CC .ui-button, .theme-FF00CC .ui-widget-content { 
+  background-color: #FF00CC;
+  border-color: #FF00CC;
+  color: #FF00CC;
+}
+.theme-FF00FF, .theme-FF00FF .ui-button, .theme-FF00FF .ui-widget-content { 
+  background-color: #FF00FF;
+  border-color: #FF00FF;
+  color: #FF00FF;
+}
+.theme-FF3300, .theme-FF3300 .ui-button, .theme-FF3300 .ui-widget-content { 
+  background-color: #FF3300;
+  border-color: #FF3300;
+  color: #FF3300;
+}
+.theme-FF3333, .theme-FF3333 .ui-button, .theme-FF3333 .ui-widget-content { 
+  background-color: #FF3333;
+  border-color: #FF3333;
+  color: #FF3333;
+}
+.theme-FF3366, .theme-FF3366 .ui-button, .theme-FF3366 .ui-widget-content { 
+  background-color: #FF3366;
+  border-color: #FF3366;
+  color: #FF3366;
+}
+.theme-FF3399, .theme-FF3399 .ui-button, .theme-FF3399 .ui-widget-content { 
+  background-color: #FF3399;
+  border-color: #FF3399;
+  color: #FF3399;
+}
+.theme-FF33CC, .theme-FF33CC .ui-button, .theme-FF33CC .ui-widget-content { 
+  background-color: #FF33CC;
+  border-color: #FF33CC;
+  color: #FF33CC;
+}
+.theme-FF33FF, .theme-FF33FF .ui-button, .theme-FF33FF .ui-widget-content { 
+  background-color: #FF33FF;
+  border-color: #FF33FF;
+  color: #FF33FF;
+}
+.theme-FF6600, .theme-FF6600 .ui-button, .theme-FF6600 .ui-widget-content { 
+  background-color: #FF6600;
+  border-color: #FF6600;
+  color: #FF6600;
+}
+.theme-FF6633, .theme-FF6633 .ui-button, .theme-FF6633 .ui-widget-content { 
+  background-color: #FF6633;
+  border-color: #FF6633;
+  color: #FF6633;
+}
+.theme-FF6666, .theme-FF6666 .ui-button, .theme-FF6666 .ui-widget-content { 
+  background-color: #FF6666;
+  border-color: #FF6666;
+  color: #FF6666;
+}
+.theme-FF6699, .theme-FF6699 .ui-button, .theme-FF6699 .ui-widget-content { 
+  background-color: #FF6699;
+  border-color: #FF6699;
+  color: #FF6699;
+}
+.theme-FF66CC, .theme-FF66CC .ui-button, .theme-FF66CC .ui-widget-content { 
+  background-color: #FF66CC;
+  border-color: #FF66CC;
+  color: #FF66CC;
+}
+.theme-FF66FF, .theme-FF66FF .ui-button, .theme-FF66FF .ui-widget-content { 
+  background-color: #FF66FF;
+  border-color: #FF66FF;
+  color: #FF66FF;
+}
+.theme-FF9900, .theme-FF9900 .ui-button, .theme-FF9900 .ui-widget-content { 
+  background-color: #FF9900;
+  border-color: #FF9900;
+  color: #FF9900;
+}
+.theme-FF9933, .theme-FF9933 .ui-button, .theme-FF9933 .ui-widget-content { 
+  background-color: #FF9933;
+  border-color: #FF9933;
+  color: #FF9933;
+}
+.theme-FF9966, .theme-FF9966 .ui-button, .theme-FF9966 .ui-widget-content { 
+  background-color: #FF9966;
+  border-color: #FF9966;
+  color: #FF9966;
+}
+.theme-FF9999, .theme-FF9999 .ui-button, .theme-FF9999 .ui-widget-content { 
+  background-color: #FF9999;
+  border-color: #FF9999;
+  color: #FF9999;
+}
+.theme-FF99CC, .theme-FF99CC .ui-button, .theme-FF99CC .ui-widget-content { 
+  background-color: #FF99CC;
+  border-color: #FF99CC;
+  color: #FF99CC;
+}
+.theme-FF99FF, .theme-FF99FF .ui-button, .theme-FF99FF .ui-widget-content { 
+  background-color: #FF99FF;
+  border-color: #FF99FF;
+  color: #FF99FF;
+}
+.theme-FFCC00, .theme-FFCC00 .ui-button, .theme-FFCC00 .ui-widget-content { 
+  background-color: #FFCC00;
+  border-color: #FFCC00;
+  color: #FFCC00;
+}
+.theme-FFCC33, .theme-FFCC33 .ui-button, .theme-FFCC33 .ui-widget-content { 
+  background-color: #FFCC33;
+  border-color: #FFCC33;
+  color: #FFCC33;
+}
+.theme-FFCC66, .theme-FFCC66 .ui-button, .theme-FFCC66 .ui-widget-content { 
+  background-color: #FFCC66;
+  border-color: #FFCC66;
+  color: #FFCC66;
+}
+.theme-FFCC99, .theme-FFCC99 .ui-button, .theme-FFCC99 .ui-widget-content { 
+  background-color: #FFCC99;
+  border-color: #FFCC99;
+  color: #FFCC99;
+}
+.theme-FFCCCC, .theme-FFCCCC .ui-button, .theme-FFCCCC .ui-widget-content { 
+  background-color: #FFCCCC;
+  border-color: #FFCCCC;
+  color: #FFCCCC;
+}
+.theme-FFCCFF, .theme-FFCCFF .ui-button, .theme-FFCCFF .ui-widget-content { 
+  background-color: #FFCCFF;
+  border-color: #FFCCFF;
+  color: #FFCCFF;
+}
+.theme-FFFF00, .theme-FFFF00 .ui-button, .theme-FFFF00 .ui-widget-content { 
+  background-color: #FFFF00;
+  border-color: #FFFF00;
+  color: #FFFF00;
+}
+.theme-FFFF33, .theme-FFFF33 .ui-button, .theme-FFFF33 .ui-widget-content { 
+  background-color: #FFFF33;
+  border-color: #FFFF33;
+  color: #FFFF33;
+}
+.theme-FFFF66, .theme-FFFF66 .ui-button, .theme-FFFF66 .ui-widget-content { 
+  background-color: #FFFF66;
+  border-color: #FFFF66;
+  color: #FFFF66;
+}
+.theme-FFFF99, .theme-FFFF99 .ui-button, .theme-FFFF99 .ui-widget-content { 
+  background-color: #FFFF99;
+  border-color: #FFFF99;
+  color: #FFFF99;
+}
+.theme-FFFFCC, .theme-FFFFCC .ui-button, .theme-FFFFCC .ui-widget-content { 
+  background-color: #FFFFCC;
+  border-color: #FFFFCC;
+  color: #FFFFCC;
+}
+.theme-FFFFFF, .theme-FFFFFF .ui-button, .theme-FFFFFF .ui-widget-content { 
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
 }
 

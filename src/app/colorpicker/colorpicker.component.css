@@ -4,9 +4,11 @@ div.colorCell {
   border: 1px solid #CCCCCC;
   display: inline-block;
   float: left;
+  margin: 2px;
+  text-align: center;
 }
-div.colorCell.selectedColor {
-  border: 2px solid #FFFFFF;
+img.brushMark {
+  margin-top: 4px;
 }
 div#colorsButtons {
   clear: both;
