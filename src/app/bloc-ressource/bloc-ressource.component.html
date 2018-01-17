@@ -1,16 +1,16 @@
 <div *ngIf="ressource" class="blocRessource">
-  <div class="sousBlocRessource {{ idRessource }}">
+  <div class="sousBlocRessource {{ idRessource }}" [ngClass]="themeColor">
     
     <div class="qteRessource {{ idRessource }}" (click)="openDialogQte()">
         <div class="qteDelta {{ idRessource }}"><span #posDelta class="digits greenText"></span><span #negDelta class="digits redText"></span></div>            
         <div><span class="digits">{{ ressource.qte }}</span></div>            
     </div>
   </div>
-  <div class="sousBlocProduction ">
+  <div class="sousBlocProduction " [ngClass]="themeColor">
     <div class="productionRessource">
-        <div class="buttonMinus" (click)="diminuerProduction()"></div><div class="productionDisplay"><div class="productionDisplayIcon"></div><div class="productionDisplayValue"><span class="digits">{{ ressource.production }}</span></div></div><div class="buttonPlus" (click)="augmenterProduction()"> </div>
+        <div class="buttonMinus" [ngClass]="themeColor" (click)="diminuerProduction()"></div><div class="productionDisplay"><div class="productionDisplayIcon" ></div><div class="productionDisplayValue" ><span class="digits">{{ ressource.production }}</span></div></div><div class="buttonPlus" [ngClass]="themeColor" (click)="augmenterProduction()"> </div>
         </div>
   </div>
 </div>
 
-<app-numpad [title]="'Augmenter / Diminuer la réserve'" [defMultiplier]="-1" [maxDigits]="2" [showPlus]="true" (validateEmitter)="applyDeltaQte($event)"></app-numpad>
+<app-numpad [title]="'Augmenter / Diminuer la réserve'" [themeColor]="themeColor" [defMultiplier]="-1" [maxDigits]="2" [showPlus]="true" (validateEmitter)="applyDeltaQte($event)"></app-numpad>

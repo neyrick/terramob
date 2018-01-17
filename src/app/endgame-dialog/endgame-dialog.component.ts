@@ -20,6 +20,8 @@ export class EndgameDialogComponent implements OnInit {
 
   @Output() restartEmitter: EventEmitter<string> = new EventEmitter();
 
+  @Input() themeColor : string;
+
   nativeElement : ElementRef;
 
   total : number = 0;
@@ -45,10 +47,10 @@ export class EndgameDialogComponent implements OnInit {
   }
 
   recommencer() : void {
-    if (confirmDialog('On efface tout et on recommence ?')) {
+    confirmDialog('On efface tout et on recommence ?', this.themeColor).then((result) => {
       $(this.nativeElement).dialog("close");
       this.restartEmitter.emit('go');
-    }
+     }).catch((reason) => {});
   }
 
   setScore(field : string) : void {

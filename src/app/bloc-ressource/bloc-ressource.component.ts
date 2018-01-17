@@ -2,6 +2,7 @@ import { Component, ViewChild, ElementRef, Input, Output, EventEmitter, AfterVie
 import { EtatRessource } from '../classes';
 import { NumpadComponent } from '../numpad/numpad.component';
 import {SignedPipe} from '../signed.pipe';
+import { confirmDialog } from '../dialogs';
 
 declare var $:any;
 
@@ -20,6 +21,8 @@ export class BlocRessourceComponent {
   @Input() ressource: EtatRessource;
 
   @Input() idRessource: string;
+
+  @Input() themeColor: string;
  
   @Output()  notifyChange: EventEmitter<number> = new EventEmitter();
 
@@ -49,9 +52,9 @@ export class BlocRessourceComponent {
          }
          if (((this.idRessource == 'plante') || (this.idRessource == 'chaleur')) && (value < 0) && ((value % 8) == 0)) {
            var deltaNT : number = value / -8;
-           if (window.confirm('Augmenter le NT de ' + deltaNT + ' ?')) {
+           confirmDialog('Augmenter le NT de ' + deltaNT + ' ?', this.themeColor).then((result) => {
              this.notifyNT.emit(deltaNT);
-           }
+           }).catch((reason) => {});
          }
      }
   }

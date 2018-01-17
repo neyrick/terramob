@@ -1,0 +1,20 @@
+div.colorCell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #CCCCCC;
+  display: inline-block;
+  float: left;
+}
+div.colorCell.selectedColor {
+  border: 2px solid #FFFFFF;
+}
+div#colorsButtons {
+  clear: both;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.5em;
+}
+div#closeColorPickerButton {
+  display: inline-block;
+  background-color: black;
+}

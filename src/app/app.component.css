@@ -1,7 +1,8 @@
 td.deltaDigit {
   width: 100px;
   height: 30px;
-  border: 1px solid black;
+  border-width: 1px;
+  border-style: solid;
   text-align: center;
   cursor:pointer;
 }
@@ -9,8 +10,11 @@ td.deltaDigit:active {
   background-color: black;
   color: white;  
 }
-div#resetButton, div#rewindButton {
+div#resetButton, div#rewindButton, div#colorButton {
   float: left;
+}
+div#colorButton {
+  padding: 10px 15px;
 }
 div#endGameButton {
   float: right;
@@ -20,3 +24,4 @@ div#appContainer {
   margin-left: auto;
   margin-right: auto;
 }
+

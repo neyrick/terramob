@@ -10,6 +10,7 @@ import * as $ from 'jquery';
 import { SignedPipe } from './signed.pipe';
 import { EndgameDialogComponent } from './endgame-dialog/endgame-dialog.component';
 import { NumpadComponent } from './numpad/numpad.component';
+import { ColorpickerComponent } from './colorpicker/colorpicker.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NumpadComponent } from './numpad/numpad.component';
     SignedPipe,
     EndgameDialogComponent,
     NumpadComponent,
+    ColorpickerComponent,
   ],
   imports: [
     BrowserModule,

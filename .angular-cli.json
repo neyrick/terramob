@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "../node_modules/jquery-ui-dist/jquery-ui.min.css",
-        "styles.css"
+        "styles.css",
+        "themes.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",

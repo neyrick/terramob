@@ -16,6 +16,8 @@ export class NumpadComponent implements OnInit, AfterViewInit {
 
   @Input() showPlus : boolean = false;
 
+  @Input() themeColor : string;
+
   @Output()  validateEmitter: EventEmitter<number> = new EventEmitter();
 
   value : number = 0;

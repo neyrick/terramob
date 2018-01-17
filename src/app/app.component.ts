@@ -1,7 +1,9 @@
 import { Component, ViewChild, ViewChildren, QueryList, AfterViewInit, ElementRef, OnInit } from '@angular/core';
 import { BlocRessourceComponent } from './bloc-ressource/bloc-ressource.component';
 import { EndgameDialogComponent } from './endgame-dialog/endgame-dialog.component';
+import { ColorpickerComponent } from './colorpicker/colorpicker.component';
 import { Partie } from './classes';
+import { confirmDialog } from './dialogs';
 
 @Component({
   selector: 'app-root',
@@ -14,14 +16,19 @@ export class AppComponent implements OnInit {
 
   @ViewChild(EndgameDialogComponent) endGameDialog;
 
+  @ViewChild(ColorpickerComponent) colorPicker;
+
   @ViewChildren(BlocRessourceComponent) blocsRessources : QueryList<BlocRessourceComponent>;
 
   partie: Partie = new Partie();
+
+  themeColor : string = 'theme-vert';
 
   ngOnInit() {
     $(this.cardsDialog.nativeElement).dialog({
       autoOpen: false,
       modal: true,
+      classes: { "ui-dialog" : "noTitle genDialog " + this.themeColor},    
       show: { effect: "drop", duration: 400, direction : 'up' },
       hide: { effect: "drop", duration: 400, direction : 'up' },
     });
@@ -52,12 +59,12 @@ export class AppComponent implements OnInit {
   }
  
   passerTour() : void {
-     if (window.confirm('Passer au tour suivant ?')) {
+     confirmDialog('Passer au tour suivant ?', this.themeColor).then((result) => {
          this.phaseProduction();
          this.partie.passerTour();
          this.save();
           $(this.cardsDialog.nativeElement).dialog("open");
-     }
+     }).catch((reason) => {});
   }
 
   afficherProductions() : void {
@@ -74,12 +81,12 @@ export class AppComponent implements OnInit {
   }
 
   finPartie(): void {
-     if (window.confirm('Lancer une dernière production et afficher le calcul du score final ?')) {
+     confirmDialog('Lancer une dernière production et afficher le calcul du score final ?', this.themeColor).then((result) => {
        this.phaseProduction();
        this.partie.terminer();
        this.save();
        $(this.endGameDialog.nativeElement).dialog("open");
-     }
+     }).catch((reason) => {});
   }
 
   ntPlus() : void {
@@ -101,7 +108,7 @@ export class AppComponent implements OnInit {
         this.save();
      }
   }
-
+onfir
   save() : void {
      window.localStorage.setItem("terramob.tour", JSON.stringify(this.partie.tour));
      window.localStorage.setItem("terramob.historique", JSON.stringify(this.partie.historique));
@@ -121,7 +128,7 @@ export class AppComponent implements OnInit {
   }
 
   confirmCard(nbCards : number) : void {
-    if (window.confirm("Acheter " + nbCards + " carte(s) ?")) {
+    confirmDialog("Acheter " + nbCards + " carte(s) ?", this.themeColor).then((result) => {
       if (nbCards > 0) {
           this.blocsRessources.forEach( bloc => { if (bloc.idRessource == 'mcred') {
              if (bloc.applyDelta(-3*nbCards)) {
@@ -130,6 +137,14 @@ export class AppComponent implements OnInit {
              };
          } });
       }
-    }
+     }).catch((reason) => {});
+  }
+
+  openColorPicker() {
+    this.colorPicker.open(this.themeColor);
+  }
+
+  setColor(color) {
+    this.themeColor = color;
   }
 }

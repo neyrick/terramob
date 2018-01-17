@@ -3,10 +3,15 @@ div#endGameContainer {
   margin-right: auto;
   padding: 20px;
   text-align: center;
+  background-color: black;
 }
 div#endGameRessources {
-  width: 150px;
+  width: 260px;
   float: left;
+}
+td.endGameRessourceProduction:before {
+    float: left;
+    content: url('../../assets/turn-mini.gif');
 }
 div#endGamePoints table {
   width: 250px;

@@ -1,10 +1,10 @@
-<div id="endGameContainer">
+<div id="endGameContainer" [ngClass]="themeColor">
 
   <div id="endGameRessources">
     <table>
       <thead><tr><td colspan="3">Ressources</td></tr></thead>
       <tbody>
-        <tr><td class="endGameRessourceLabel mcred">MégaCrédits</td><td class="endGameRessourceValue">{{ etat.mcred.qte }}</td><td class="endGameRessourceProduction">{{ etat.mcred.production }}</td></tr>
+        <tr><td class="endGameRessourceLabel mcred">MégaCrédits</td><td class="endGameRessourceValue">{{ etat.mcred.qte }}</td><td class="endGameRessourceProduction"><span>{{ etat.mcred.production }}</span></td></tr>
         <tr><td class="endGameRessourceLabel acier">Acier</td><td class="endGameRessourceValue">{{ etat.acier.qte }}</td><td class="endGameRessourceProduction">{{ etat.acier.production }}</td></tr>
         <tr><td class="endGameRessourceLabel titane">Titane</td><td class="endGameRessourceValue">{{ etat.titane.qte }}</td><td class="endGameRessourceProduction">{{ etat.titane.production }}</td></tr>
         <tr><td class="endGameRessourceLabel plante">Végétaux</td><td class="endGameRessourceValue">{{ etat.plante.qte }}</td><td class="endGameRessourceProduction">{{ etat.plante.production }}</td></tr>
