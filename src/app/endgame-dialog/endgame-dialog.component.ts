@@ -38,7 +38,7 @@ export class EndgameDialogComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    $(this.nativeElement).dialog({
+    (<any>$(this.nativeElement)).dialog({
       autoOpen: false,
       modal: true,
       show: { effect: "drop", duration: 400, direction : 'up' },
@@ -50,7 +50,7 @@ export class EndgameDialogComponent implements OnInit {
 
   recommencer() : void {
     confirmDialog('On efface tout et on recommence ?', this.themeColor).then((result) => {
-      $(this.nativeElement).dialog("close");
+      (<any>$(this.nativeElement)).dialog("close");
       this.restartEmitter.emit('go');
      }).catch((reason) => {});
   }

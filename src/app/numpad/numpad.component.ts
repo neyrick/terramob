@@ -32,7 +32,7 @@ export class NumpadComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    $(this.nativeElement).dialog({
+    (<any>$(this.nativeElement)).dialog({
       autoOpen: false,
       modal: true,
       width: '450px',
@@ -44,11 +44,11 @@ export class NumpadComponent implements OnInit, AfterViewInit {
 
   open(newvalue : number = 0) : void {
      this.value = newvalue;
-     $(this.nativeElement).dialog( "open" );
+     (<any>$(this.nativeElement)).dialog( "open" );
   }
 
   close() : void {
-     $(this.nativeElement).dialog( "close" );
+     (<any>$(this.nativeElement)).dialog( "close" );
   }
 
   reverseValue() : void {

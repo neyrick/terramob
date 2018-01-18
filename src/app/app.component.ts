@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   themeColor : string = 'theme-FFFFFF';
 
   ngOnInit() {
-    $(this.cardsDialog.nativeElement).dialog({
+    (<any>$(this.cardsDialog.nativeElement)).dialog({
       autoOpen: false,
       modal: true,
       classes: { "ui-dialog" : "noTitle genDialog " + this.themeColor},    
@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
 
   ngAfterViewInit() : void {
     if (this.partie.terminee) {
-        $(this.endGameDialog.nativeElement).dialog("open");
+        (<any>$(this.endGameDialog.nativeElement)).dialog("open");
     }
   }
 
@@ -63,7 +63,7 @@ export class AppComponent implements OnInit {
          this.phaseProduction();
          this.partie.passerTour();
          this.save();
-          $(this.cardsDialog.nativeElement).dialog("open");
+          (<any>$(this.cardsDialog.nativeElement)).dialog("open");
      }).catch((reason) => {});
   }
 
@@ -85,7 +85,7 @@ export class AppComponent implements OnInit {
        this.phaseProduction();
        this.partie.terminer();
        this.save();
-       $(this.endGameDialog.nativeElement).dialog("open");
+       (<any>$(this.endGameDialog.nativeElement)).dialog("open");
      }).catch((reason) => {});
   }
 
@@ -134,13 +134,13 @@ export class AppComponent implements OnInit {
       if (nbCards > 0) {
           this.blocsRessources.forEach( bloc => { if (bloc.idRessource == 'mcred') {
              if (bloc.applyDelta(-3*nbCards)) {
-                  $(this.cardsDialog.nativeElement).dialog("close");
+                  (<any>$(this.cardsDialog.nativeElement)).dialog("close");
                  this.save();
              };
          } });
       }
      else {
-                  $(this.cardsDialog.nativeElement).dialog("close");
+                  (<any>$(this.cardsDialog.nativeElement)).dialog("close");
      }
      }).catch((reason) => {});
   }

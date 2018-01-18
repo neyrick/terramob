@@ -24,7 +24,7 @@ export class ColorpickerComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    $(this.nativeElement).dialog({
+    (<any>$(this.nativeElement)).dialog({
       autoOpen: false,
       modal: true,
       show: { effect: "drop", duration: 400, direction : 'up' },
@@ -37,11 +37,11 @@ export class ColorpickerComponent implements OnInit {
 
   open(color: string) : void {
     this.selectedColor = color;
-     $(this.nativeElement).dialog( "open" );
+     (<any>$(this.nativeElement)).dialog( "open" );
   }
 
   close() : void {
-     $(this.nativeElement).dialog( "close" );
+     (<any>$(this.nativeElement)).dialog( "close" );
   }
 
   selectColor(color: string) : void {
