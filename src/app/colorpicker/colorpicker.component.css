@@ -20,3 +20,12 @@ div#closeColorPickerButton {
   display: inline-block;
   background-color: black;
 }
+@media all and (max-device-width: 650px) {
+    div.colorCell {
+      width: 20px;
+      height: 20px;
+    }
+    img.brushMark {
+      margin-top: 0;
+    }
+}

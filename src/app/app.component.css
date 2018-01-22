@@ -11,17 +11,51 @@ td.deltaDigit:active {
   color: white;  
 }
 div#resetButton, div#rewindButton, div#colorButton {
-  float: left;
-}
-div#colorButton {
-  padding: 10px 15px;
-}
-div#endGameButton {
-  float: right;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
 }
 div#appContainer {
-  width: 96%;
-  margin-left: auto;
-  margin-right: auto;
+  display: inline-block;
 }
-
+div#topContainer {
+  text-align: center;
+}
+div#bottomBar {
+  clear: both;
+}
+div.bottomButtonWrapper {
+  padding: 10px;
+  display: inline-block;
+  float: left;
+  margin-left: 1%
+}
+div#colorButton {
+  background-image: url('../assets/brush.png');
+}
+div#resetButton {
+  background-image: url('../assets/reset.png');
+}
+div#rewindButton {
+  background-image: url('../assets/rewind.png');
+}
+div#endGameButton {
+    height: 40px;
+    padding: 5px;
+}
+@media all and (orientation: portrait) and (max-device-width: 650px) {
+    div.bottomButtonWrapper {
+      float: unset;
+    }
+}
+@media all and (max-device-width: 650px) {
+    div#colorButton {
+      background-image: url('../assets/brush_small.png');
+    }
+    div#resetButton {
+      background-image: url('../assets/reset_small.png');
+    }
+    div#rewindButton {
+      background-image: url('../assets/rewind_small.png');
+    }
+}

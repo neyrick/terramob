@@ -44,7 +44,7 @@ export class EndgameDialogComponent implements OnInit {
       show: { effect: "drop", duration: 400, direction : 'up' },
       hide: { effect: "drop", duration: 400, direction : 'up' },
       classes: { "ui-dialog" : "noTitle genDialog" },
-      width: '550',
+      width: '90%',
     });
   }
 

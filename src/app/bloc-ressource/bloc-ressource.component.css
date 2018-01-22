@@ -8,6 +8,7 @@ div.sousBlocRessource {
   border-top-right-radius: 25px;
   background-blend-mode: multiply;
   border-color: #CCCCCC;
+  padding-left: 10px;
 }
 div.sousBlocProduction {
   border-bottom-left-radius: 25px;
@@ -18,12 +19,10 @@ div.sousBlocProduction {
   border-color: #CCCCCC;
 }
 div.qteRessource {
-  min-height: 210px;
   width: 100%;
   background-repeat: no-repeat;
   background-position: left center;
   text-align: right;
-  font-size: 200px;
   border: none;
   color: white;
   position: relative;
@@ -52,24 +51,34 @@ div.productionRessource  div{
 div.productionRessource {
   margin-left: auto ;
   margin-right: auto ;
-  height: 60px;
-  width: 250px;
   padding-top: 5px;
 }
 div.productionDisplay {
-    width: 150px;
     text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 div.productionDisplayValue {
     background-color: black;
     color: white;
 }
 div.sousBlocProduction div.productionDisplayValue {
-    vertical-align: top;
-    font-size: 3em;
+    vertical-align: middle;
+    font-size: 2em;
 }
 div.qteDelta {
     position: absolute;
     width: 100%;
     display: none;
 }
+@media all and (max-device-width: 650px) {
+    div.sousBlocRessource {
+        min-width: unset;
+    }
+    div.productionRessource {
+      padding-top: 0px;
+    }
+}
+@media all and (max-device-width: 1300px) {
+}
+

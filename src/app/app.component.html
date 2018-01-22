@@ -1,3 +1,5 @@
+<div id="topContainer">
+
 <div id="appContainer">
 <div id="topmenu">
 <div id="ntBloc" class="plaque" [ngClass]="themeColor">
@@ -9,8 +11,7 @@
 </div>
 
 <div id="tourBloc" class="plaque" [ngClass]="themeColor" (click)="passerTour()">
-  <div class="productionDisplayIcon" [ngClass]="themeColor"></div>
-  <div class="tourDisplay">Tour: <span class="digits">{{ partie.tour }}</span></div>
+  <div class="turnIcon" [ngClass]="themeColor"></div><div class="tourDisplay">Tour: <span class="digits">{{ partie.tour }}</span></div>
 </div>
 
 </div>
@@ -22,10 +23,10 @@
 <app-bloc-ressource [themeColor]="themeColor" [idRessource]="'energie'" [ressource]="partie.etat.energie" (notifyChange)="handleChange($event)" (notifyNT)="changerNT($event)"></app-bloc-ressource>
 <app-bloc-ressource [themeColor]="themeColor" [idRessource]="'chaleur'" [ressource]="partie.etat.chaleur" (notifyChange)="handleChange($event)" (notifyNT)="changerNT($event)"></app-bloc-ressource>
 </div>
-<div>
-  <div id="colorButton" (click)="openColorPicker()" class="btn rounded" [ngClass]="themeColor"><img src="assets/brush.png"/></div>
-  <div id="resetButton" (click)="reset()" class="btn blackbtn rounded" [ngClass]="themeColor">Réinitialiser</div>
-  <div id="rewindButton" (click)="rewind()" class="btn blackbtn rounded" [ngClass]="themeColor">Revenir en arrère</div>
+<div id="bottomBar">
+  <div class="btn blackbtn rounded bottomButtonWrapper"><div id="colorButton" (click)="openColorPicker()" [ngClass]="themeColor"></div></div>
+  <div class="btn blackbtn rounded bottomButtonWrapper"><div id="resetButton" (click)="reset()" [ngClass]="themeColor"></div></div>
+  <div class="btn blackbtn rounded bottomButtonWrapper"><div id="rewindButton" (click)="rewind()" [ngClass]="themeColor"></div></div>
   <div id="endGameButton" (click)="finPartie()" class="btn blackbtn rounded" [ngClass]="themeColor">Fin de la Partie</div>
 </div>
 </div>
@@ -38,7 +39,7 @@
     <tr><td class="deltaDigit" (click)="confirmCard(0)">0</td><td class="deltaDigit" (click)="confirmCard(1)">1</td><td class="deltaDigit" (click)="confirmCard(2)">2</td><td class="deltaDigit" (click)="confirmCard(3)">3</td><td class="deltaDigit" (click)="confirmCard(4)">4</td></tr>
    </table>
 </div>
-
+</div>
 
  <app-colorpicker (colorEmitter)="setColor($event)"></app-colorpicker>
  <app-endgame-dialog [themeColor]="themeColor" [etat]="partie.etat" [scores]="partie.scores" (restartEmitter)="reset()" (saveEmitter)="save()"></app-endgame-dialog> 
