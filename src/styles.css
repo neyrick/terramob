@@ -84,7 +84,6 @@ div.blocRessource {
   width: 32%;
   margin-left: 0.5%;
   margin-right: 0.5%;
-  margin-top: 1%;
   margin-bottom: 1%;
  }
 @media all and (orientation:landscape)
@@ -134,6 +133,7 @@ div.plaque div{
 div#ntBloc {
   float: left;
   border-color: #CCCCCC;
+   margin-bottom: 0.5%;
 }
 div#tourBloc, div#endGameButton {
   float: right;
@@ -202,7 +202,7 @@ div.productionDisplayIcon, div.turnIcon {
     background-image: url('assets/turn.gif');
 }
 div.qteRessource {
-    font-size: 8em;
+    font-size: 11em;
 }
 div#resetButton, div#rewindButton, div#colorButton {
   float: left;
@@ -288,5 +288,23 @@ div#resetButton, div#rewindButton, div#colorButton {
       background-image: url('assets/res-chaleur_small.png');
     }
 }
-@media all and (max-device-width: 1300px) {
+@media all and (max-device-width: 1300px) and (min-device-width: 651px) {
+    div.qteRessource.mcred {
+      background-image: url('assets/res-mcred_medium.png');
+    }
+    div.qteRessource.acier {
+      background-image: url('assets/res-acier_medium.png');
+    }
+    div.qteRessource.titane {
+      background-image: url('assets/res-titane_medium.png');
+    }
+    div.qteRessource.plante {
+      background-image: url('assets/res-plante_medium.png');
+    }
+    div.qteRessource.energie {
+      background-image: url('assets/res-energie_medium.png');
+    }
+    div.qteRessource.chaleur {
+      background-image: url('assets/res-chaleur_medium.png');
+    }
 }

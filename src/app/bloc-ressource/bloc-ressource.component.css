@@ -52,6 +52,7 @@ div.productionRessource {
   margin-left: auto ;
   margin-right: auto ;
   padding-top: 5px;
+  padding-bottom: 5px;
 }
 div.productionDisplay {
     text-align: center;

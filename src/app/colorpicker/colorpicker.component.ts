@@ -45,6 +45,7 @@ export class ColorpickerComponent implements OnInit {
   }
 
   selectColor(color: string) : void {
+     this.selectedColor = color;
      this.colorEmitter.emit(color);
   }
 
