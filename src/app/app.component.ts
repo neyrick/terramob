@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
 
   @ViewChild('cardsDialog') cardsDialog:ElementRef;
 
+  @ViewChild('appContainer') appContainer:ElementRef;
+
   @ViewChild(EndgameDialogComponent) endGameDialog;
 
   @ViewChild(ColorpickerComponent) colorPicker;
@@ -152,5 +154,22 @@ export class AppComponent implements OnInit {
   setColor(color) {
     this.themeColor = color;
     this.save();
+  }
+
+  goFullScreen() {
+    var element = this.appContainer.nativeElement;
+    console.log('TEST 1');
+    if (document.fullscreenEnabled) {
+        console.log('TEST 2');
+        if (element.requestFullscreen) {
+	        element.requestFullscreen();
+        } else if (element.webkitRequestFullscreen) {
+	        element.webkitRequestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+	        element.mozRequestFullScreen();
+        } else if (element.msRequestFullscreen) {
+	        element.msRequestFullscreen();
+        }
+    }
   }
 }

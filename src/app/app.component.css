@@ -10,7 +10,7 @@ td.deltaDigit:active {
   background-color: black;
   color: white;  
 }
-div#resetButton, div#rewindButton, div#colorButton {
+div#resetButton, div#rewindButton, div#colorButton, div#fullscreenButton {
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: multiply;
@@ -29,6 +29,9 @@ div.bottomButtonWrapper {
   display: inline-block;
   float: left;
   margin-left: 1%
+}
+div#fullscreenButton {
+  background-image: url('../assets/fullscreen.png');
 }
 div#colorButton {
   background-image: url('../assets/brush.png');
@@ -49,6 +52,9 @@ div#endGameButton {
     }
 }
 @media all and (max-device-width: 650px) {
+    div#fullscreenButton {
+      background-image: url('../assets/fullscreen_small.png');
+    }
     div#colorButton {
       background-image: url('../assets/brush_small.png');
     }

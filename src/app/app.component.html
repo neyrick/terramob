@@ -1,6 +1,6 @@
 <div id="topContainer">
 
-<div id="appContainer">
+<div id="appContainer" #appContainer >
 <div id="topmenu">
 <div id="ntBloc" class="plaque" [ngClass]="themeColor">
   <div class="buttonMinus" [ngClass]="themeColor" (click)="ntMoins()"></div>
@@ -24,6 +24,7 @@
 <app-bloc-ressource [themeColor]="themeColor" [idRessource]="'chaleur'" [ressource]="partie.etat.chaleur" (notifyChange)="handleChange($event)" (notifyNT)="changerNT($event)"></app-bloc-ressource>
 </div>
 <div id="bottomBar">
+  <div class="btn blackbtn rounded bottomButtonWrapper"><div id="fullscreenButton" (click)="goFullScreen()" [ngClass]="themeColor"></div></div>
   <div class="btn blackbtn rounded bottomButtonWrapper"><div id="colorButton" (click)="openColorPicker()" [ngClass]="themeColor"></div></div>
   <div class="btn blackbtn rounded bottomButtonWrapper"><div id="resetButton" (click)="reset()" [ngClass]="themeColor"></div></div>
   <div class="btn blackbtn rounded bottomButtonWrapper"><div id="rewindButton" (click)="rewind()" [ngClass]="themeColor"></div></div>
